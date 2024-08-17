@@ -15,5 +15,4 @@ public class DeleteEnemyZone : MonoBehaviour
             Destroy(enemy.gameObject);
         }
     }
-
 }

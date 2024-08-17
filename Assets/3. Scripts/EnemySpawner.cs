@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] Collider2D[] spawnZones;
     [SerializeField] Collider2D targetZone;
 
+    [SerializeField] bool TurnOffSpawner;
 
     private void Start()
     {
@@ -18,6 +19,8 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnAsteroid()
     {
+        if (TurnOffSpawner) return;
+
         int rnd = Random.Range(0, spawnZones.Length);
         GameObject gob = Instantiate(asteroidObject, RandomPointInBounds(spawnZones[rnd].bounds), Quaternion.identity);
 

@@ -9,7 +9,7 @@ public class SoundManager : MonoBehaviour
     // "Sounds" is a custom class that contain information about a soundclip
     //Information in Sounds[] array is populated in Awake().
     public Sounds[] sounds;
-    public static SoundManager instance;
+    public static SoundManager Instance;
 
     [SerializeField] AudioMixerGroup musicMixer;
     [SerializeField] AudioMixerGroup sfxMixer;
@@ -25,9 +25,9 @@ public class SoundManager : MonoBehaviour
     void Awake()
     {
         // This ensures the AudioManager is only loaded once and isn't destroyed between scenes.
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
         else
         {
@@ -179,14 +179,6 @@ public class SoundManager : MonoBehaviour
     {
         soundOverride = true;
         ChangeSoundVolumeOverTime(name, volume, seconds);
-    }
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            PlaySound("Cat");
-        }
     }
 
     private void FixedUpdate()
