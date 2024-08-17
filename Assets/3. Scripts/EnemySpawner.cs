@@ -22,6 +22,16 @@ public class EnemySpawner : MonoBehaviour
         GameObject gob = Instantiate(asteroidObject, RandomPointInBounds(spawnZones[rnd].bounds), Quaternion.identity);
 
         float scale = Random.Range(asteroidSizeRange[0], asteroidSizeRange[1]);
+        int modScale = Random.Range(0, 10);
+        if (modScale == 0)
+        {
+            scale *= 2.5f;
+        }
+        else if (modScale == 1)
+        {
+            scale /= 2.5f;
+        }
+
         gob.transform.localScale = new Vector3(scale, scale, scale);
         gob.GetComponent<Rigidbody2D>().mass = scale;
 

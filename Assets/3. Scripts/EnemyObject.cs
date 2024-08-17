@@ -23,7 +23,7 @@ public class EnemyObject : MonoBehaviour
     public void ChangeSize(float value)
     {
         float scale = transform.localScale.x;
-        if (scale + value * Time.deltaTime > 0.25f)
+        if (value > 0 || scale + value * Time.deltaTime > 0.25f)
         {
             scale += value * Time.deltaTime;
             transform.localScale = new Vector3(scale, scale, scale);
