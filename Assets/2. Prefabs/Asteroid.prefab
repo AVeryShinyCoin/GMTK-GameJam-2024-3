@@ -95,9 +95,8 @@ GameObject:
   - component: {fileID: 8943041238569363564}
   - component: {fileID: 9140106927371068077}
   - component: {fileID: 5147804561171931632}
-  - component: {fileID: 5757755693976233938}
   - component: {fileID: 8699497705930652564}
-  - component: {fileID: 1067537129783859192}
+  - component: {fileID: 2101250093247563996}
   m_Layer: 6
   m_Name: Asteroid
   m_TagString: Untagged
@@ -162,7 +161,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 100
   cantBeDeleted: 1
---- !u!60 &5757755693976233938
+--- !u!114 &8699497705930652564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281236402272919775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35dff16fa42c56d4e98b80d4175bc7b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &2101250093247563996
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,73 +208,30 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.25, y: 0.25}
-      - {x: -0.443, y: 0.997}
-      - {x: 0.33, y: 1.368}
-      - {x: 0.925, y: 1.368}
-      - {x: 1.225, y: 0.945}
-      - {x: 1.4125, y: 0.3}
-      - {x: 1.4125, y: -0.5}
-      - {x: 0.6624, y: -1.164}
-      - {x: 0.0997, y: -1.3514}
-      - {x: -0.5, y: -1.3514}
-      - {x: -1.197, y: -1.193}
-      - {x: -1.4003, y: -0.75}
-      - {x: -1.4003, y: -0.276}
+    - - {x: 0.81204224, y: 0.63128716}
+      - {x: 0.5579071, y: 0.909051}
+      - {x: 0.22516203, y: 0.9037931}
+      - {x: -0.088787556, y: 0.7593724}
+      - {x: -0.13569498, y: 0.6157447}
+      - {x: -0.32525492, y: 0.60246634}
+      - {x: -0.8346072, y: 0.12028888}
+      - {x: -0.9258256, y: -0.49099052}
+      - {x: -0.7363586, y: -0.7929551}
+      - {x: -0.24045753, y: -0.89678437}
+      - {x: 0.112021446, y: -0.9020882}
+      - {x: 0.44724333, y: -0.78893954}
+      - {x: 0.5776081, y: -0.51302433}
+      - {x: 0.71636295, y: -0.5052492}
+      - {x: 0.9515748, y: -0.30780768}
+      - {x: 0.9559698, y: 0.19518858}
+      - {x: 0.83059216, y: 0.44554386}
   m_UseDelaunayMesh: 0
---- !u!114 &8699497705930652564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281236402272919775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35dff16fa42c56d4e98b80d4175bc7b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!58 &1067537129783859192
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281236402272919775}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.07, y: -0.05}
-  serializedVersion: 2
-  m_Radius: 0.7353056

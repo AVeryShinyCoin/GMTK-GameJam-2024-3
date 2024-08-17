@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1593bec01f6d744187cb0029af6e4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraSpeed: 0
-  acceleration: 2
-  tractorBeamPower: 0
-  sizeChangePower: 0
+  cameraSpeed: 100
+  acceleration: 60
+  tractorBeamPower: 1200
+  sizeChangePower: 4
   movementControlsKeyboard:
     m_Name: Movement Controls Keyboard
     m_Type: 0
@@ -133,10 +133,15 @@ MonoBehaviour:
       m_Action: Scale Changer
       m_Flags: 8
     m_Flags: 0
+  laserBeam: {fileID: 0}
+  laserBeamSr: {fileID: 0}
+  sizeIncreaseBeam: {fileID: -1596931088, guid: 6e15e6bd5aa137548abab01344e95859, type: 3}
+  sizeDecreaseBeam: {fileID: -1858184311, guid: 6e15e6bd5aa137548abab01344e95859, type: 3}
+  tractorBeam: {fileID: 1214919612, guid: 6e15e6bd5aa137548abab01344e95859, type: 3}
   enemyMask:
     serializedVersion: 2
-    m_Bits: 0
-  testObj: {fileID: 0}
+    m_Bits: 64
+  explosionPrefab: {fileID: 1643143370711004637, guid: 702137243a3103e4dac2870f99f9ff68, type: 3}
 --- !u!50 &8319419258280763369
 Rigidbody2D:
   serializedVersion: 4
