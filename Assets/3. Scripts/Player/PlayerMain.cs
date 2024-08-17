@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMain : MonoBehaviour
 {
@@ -22,6 +24,9 @@ public class PlayerMain : MonoBehaviour
 
     [SerializeField] LayerMask enemyMask;
     [SerializeField] GameObject testObj;
+
+    Vector3 cameraVelocity = Vector3.zero;
+
 
     private void Awake()
     {
@@ -74,21 +79,28 @@ public class PlayerMain : MonoBehaviour
 
     void AdjustCamera()
     {
-        Vector2 cameraPos;
-        if (currentTarget == null)
-        {
-            cameraPos = (cam.ScreenToWorldPoint(Input.mousePosition) + transform.position) / 2;
-        }
-        else
-        {
-            cameraPos = (currentTarget.position + transform.position) / 2;
-        }
+        //Vector3 targetPos = ((Vector2)transform.position + (Vector2)transform.position + movementControlsKeyboard.ReadValue<Vector2>().normalized * 5) / 2;
+        //float distance = Vector2.Distance(targetPos, cam.transform.position);
+        //Debug.Log(distance);
 
-        Vector3 newPos = Vector3.Slerp(cam.transform.position, cameraPos, cameraSpeed * Time.deltaTime);
-        testObj.transform.position = newPos;
-        newPos.z = -10;
-        cam.transform.position = newPos;
-        
+        //if (distance > 0.1f)
+        //{
+        //    Vector3 newPos = (cam.transform.position + targetPos).normalized * distance * cameraSpeed * Time.deltaTime;
+
+        //    testObj.transform.position = targetPos;
+        //    newPos.z = -10;
+        //    cam.transform.position = newPos;
+        //}
+
+
+        Transform target = transform;
+        float dampTime = 0.15f;
+
+        Vector3 point = cam.WorldToViewportPoint(target.position);
+        Vector3 delta = target.position - cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z)); //(new Vector3(0.5, 0.5, point.z));
+        Vector3 destination = cam.transform.position + delta;
+        cam.transform.position = Vector3.SmoothDamp(cam.transform.position, destination, ref cameraVelocity, dampTime);
+
     }
 
 
