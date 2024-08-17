@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3656f17c45978f444acdb5ae0bdca57e
+guid: 4ca3e352ea724c84892d0db680f33146
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,43 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Thruster_04_0
+      name: Digging_Machine_Front_Section_30fps_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 13
-        width: 15
-        height: 7
+        x: 0
+        y: 0
+        width: 56
+        height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b03a24a66fb73844aa754f298bf1e077
-      internalID: 656440443
+      spriteID: 3c85a44fbe6c3d641a4b7f5b9588b74a
+      internalID: -922958272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thruster_04_1
+      name: Digging_Machine_Front_Section_30fps_1
       rect:
         serializedVersion: 2
-        x: 47
-        y: 12
-        width: 17
-        height: 9
+        x: 56
+        y: 0
+        width: 56
+        height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27f5fc9b5685ea140bec657217cfaf8e
-      internalID: 1304910662
+      spriteID: 06a663f9e3b0e2b44a60b6968b9008e3
+      internalID: -1772937022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Digging_Machine_Front_Section_30fps_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 56
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b1f886b85dc714e89a0618722388fc
+      internalID: -303811819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Digging_Machine_Front_Section_30fps_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 56
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6df577b27fde34289319f31d5d3356
+      internalID: -1795442497
       vertices: []
       indices: 
       edges: []
@@ -162,8 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Thruster_04_0: 656440443
-      Thruster_04_1: 1304910662
+      Digging_Machine_Front_Section_30fps_0: -922958272
+      Digging_Machine_Front_Section_30fps_1: -1772937022
+      Digging_Machine_Front_Section_30fps_2: -303811819
+      Digging_Machine_Front_Section_30fps_3: -1795442497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

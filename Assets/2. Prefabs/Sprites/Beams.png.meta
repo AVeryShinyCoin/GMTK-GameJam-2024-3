@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3656f17c45978f444acdb5ae0bdca57e
+guid: 4be4b11d68bb4424c98fde1dcc8605e0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,43 +110,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Thruster_04_0
+      name: Beams_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 13
-        width: 15
-        height: 7
+        x: 6
+        y: 11
+        width: 23
+        height: 30
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b03a24a66fb73844aa754f298bf1e077
-      internalID: 656440443
+      spriteID: d55760c803bb83346b306faa817c5630
+      internalID: 548893951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thruster_04_1
+      name: Beams_1
       rect:
         serializedVersion: 2
-        x: 47
-        y: 12
-        width: 17
-        height: 9
+        x: 39
+        y: 11
+        width: 2
+        height: 30
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27f5fc9b5685ea140bec657217cfaf8e
-      internalID: 1304910662
+      spriteID: 31a831994cab0f74d9c91f49c5b1792b
+      internalID: 1291545310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beams_2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 11
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef394acd1e6cf1f4a82defedff64e17d
+      internalID: 215578978
       vertices: []
       indices: 
       edges: []
@@ -162,8 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Thruster_04_0: 656440443
-      Thruster_04_1: 1304910662
+      Beams_0: 548893951
+      Beams_1: 1291545310
+      Beams_2: 215578978
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
