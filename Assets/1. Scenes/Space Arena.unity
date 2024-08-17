@@ -672,7 +672,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 590.877, y: 372.172}
+  m_SizeDelta: {x: 608.113, y: 385.099}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &212168767
 MonoBehaviour:
@@ -694,18 +694,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pull asteroids into the grinder to earn $$$
+  m_text: 'Pull asteroids into the M.O.L.E. grinder to earn $$$
 
-    Bigger asteroids are
-    worth more
+    Bigger asteroids
+    are worth more
 
     Avoid crashing into asteroids
 
 
     WASD: Move
 
-    LMB: Tractor
-    beam
+    LMB:
+    Tractor beam
 
     Shift: Shrinking beam
 
