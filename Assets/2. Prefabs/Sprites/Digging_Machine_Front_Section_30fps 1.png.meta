@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4ca3e352ea724c84892d0db680f33146
+guid: 1260bff7b533aeb46acb7f59590dd0b2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,85 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Digging_Machine_Front_Section_30fps_0
+      name: Digging_Machine_Front_Section_30fps 1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
         width: 56
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c85a44fbe6c3d641a4b7f5b9588b74a
-      internalID: -922958272
+      spriteID: 1c8a44cf139f50b4a9280c5ce05e70b1
+      internalID: 1811132112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Digging_Machine_Front_Section_30fps_1
+      name: Digging_Machine_Front_Section_30fps 1_1
       rect:
         serializedVersion: 2
-        x: 56
+        x: 58
         y: 0
         width: 56
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06a663f9e3b0e2b44a60b6968b9008e3
-      internalID: -1772937022
+      spriteID: d3ac534654d740a4584be688cbb013dd
+      internalID: 1318089641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Digging_Machine_Front_Section_30fps_2
+      name: Digging_Machine_Front_Section_30fps 1_2
       rect:
         serializedVersion: 2
-        x: 112
+        x: 115
         y: 0
         width: 56
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4b1f886b85dc714e89a0618722388fc
-      internalID: -303811819
+      spriteID: 23626d6284e392c4ead95f7254281e0c
+      internalID: 1052172705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Digging_Machine_Front_Section_30fps_3
+      name: Digging_Machine_Front_Section_30fps 1_3
       rect:
         serializedVersion: 2
-        x: 168
+        x: 172
         y: 0
         width: 56
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd6df577b27fde34289319f31d5d3356
-      internalID: -1795442497
+      spriteID: 3288f0f5655ec0341bc20bb15adb5632
+      internalID: -518757543
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Digging_Machine_Front_Section_30fps_0: -922958272
-      Digging_Machine_Front_Section_30fps_1: -1772937022
-      Digging_Machine_Front_Section_30fps_2: -303811819
-      Digging_Machine_Front_Section_30fps_3: -1795442497
+      Digging_Machine_Front_Section_30fps 1_0: 1811132112
+      Digging_Machine_Front_Section_30fps 1_1: 1318089641
+      Digging_Machine_Front_Section_30fps 1_2: 1052172705
+      Digging_Machine_Front_Section_30fps 1_3: -518757543
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
