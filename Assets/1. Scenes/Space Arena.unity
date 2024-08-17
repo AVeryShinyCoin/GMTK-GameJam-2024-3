@@ -828,6 +828,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 973022259461256900, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: m_Name
+      value: Asteroid Gfx
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid
