@@ -6,17 +6,18 @@ public class EnemyObject : MonoBehaviour
 {
 
     Rigidbody2D rb;
-
+    public float scoreValue;
+    public bool cantBeDeleted = true;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        Invoke("BecomeDeletable", 5f);
     }
 
     public void GetPulled(Vector2 destination, float force)
     {
-        Debug.Log("triggered!");
-        rb.AddRelativeForce((destination - (Vector2)transform.position).normalized * force * Time.deltaTime);
+        rb.AddForce((destination - (Vector2)transform.position).normalized * force * Time.deltaTime);
     }
 
     public void ChangeSize(float value)
@@ -28,5 +29,10 @@ public class EnemyObject : MonoBehaviour
             transform.localScale = new Vector3(scale, scale, scale);
             rb.mass = scale;
         }
+    }
+
+    void BecomeDeletable()
+    {
+        cantBeDeleted = false;
     }
 }

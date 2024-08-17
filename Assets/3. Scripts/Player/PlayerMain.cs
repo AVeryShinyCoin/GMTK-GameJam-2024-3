@@ -34,7 +34,7 @@ public class PlayerMain : MonoBehaviour
         cam = Camera.main;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Vector2 direction;
         if (currentTarget == null)
@@ -59,13 +59,17 @@ public class PlayerMain : MonoBehaviour
             rb.AddForce(movementControlsKeyboard.ReadValue<Vector2>().normalized * acceleration);
         }
 
-        if (scaleChanger.ReadValue<float>() == 0
-            && !Input.GetMouseButton(0))
+
+    }
+
+    private void Update()
+    {
+        if (scaleChanger.ReadValue<float>() == 0 && !Input.GetMouseButton(0))
         {
             currentTarget = null;
             return;
         }
-        
+
         if (scaleChanger.ReadValue<float>() != 0)
         {
             SizeChangeBeam(scaleChanger.ReadValue<float>());

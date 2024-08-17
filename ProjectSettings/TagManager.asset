@@ -12,9 +12,9 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
-  - 
-  - 
+  - Player
+  - Terrain
+  - Event Zones
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Terrain
+    uniqueID: 869290541
+    locked: 0
+  - name: Enemies
+    uniqueID: 2047464455
+    locked: 0
+  - name: Player
+    uniqueID: 4269444119
+    locked: 0
+  - name: UI
+    uniqueID: 1898279567
     locked: 0

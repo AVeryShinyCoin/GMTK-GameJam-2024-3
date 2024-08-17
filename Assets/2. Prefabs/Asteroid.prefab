@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2047464455
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 130721614, guid: dc00502c7fddd7242a6bbe95fe899836, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 9140106927371068077}
   - component: {fileID: 5147804561171931632}
   - component: {fileID: 5757755693976233938}
+  - component: {fileID: 8699497705930652564}
   m_Layer: 6
   m_Name: Asteroid
   m_TagString: Untagged
@@ -133,7 +134,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 4
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -158,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df6f178d50debb408e952e86796a41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 100
 --- !u!60 &5757755693976233938
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -211,3 +213,15 @@ PolygonCollider2D:
       - {x: 0.3939741, y: 0.22421579}
       - {x: 0.3375885, y: 0.39481726}
   m_UseDelaunayMesh: 0
+--- !u!114 &8699497705930652564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281236402272919775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35dff16fa42c56d4e98b80d4175bc7b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
