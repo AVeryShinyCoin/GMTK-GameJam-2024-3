@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] bool TurnOffSpawner;
     [SerializeField] GameObject[] asteroidObjects;
     [SerializeField] float[] asteroidSizeRange;
 
     [SerializeField] Collider2D[] spawnZones;
     [SerializeField] Collider2D targetZone;
 
-    [SerializeField] bool TurnOffSpawner;
 
     private void Start()
     {

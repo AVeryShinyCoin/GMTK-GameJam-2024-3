@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraSpeed: 100
   acceleration: 60
-  TractorBeamPower: 1200
+  TractorBeamPower: 1600
   RescaleBeamPower: 4
   movementControlsKeyboard:
     m_Name: Movement Controls Keyboard
