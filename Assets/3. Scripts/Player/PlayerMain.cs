@@ -11,11 +11,14 @@ public class PlayerMain : MonoBehaviour
     [SerializeField] float acceleration;
     public float TractorBeamPower;
     public float RescaleBeamPower;
-
+    public bool EnablePushwave;
+    public bool EnableMissiles;
 
     [Space(20)]
     [SerializeField] InputAction movementControlsKeyboard;
     [SerializeField] InputAction scaleChanger;
+    [SerializeField] InputAction pushWave;
+    [SerializeField] InputAction fireMissle;
 
     [SerializeField] Transform laserBeam;
     [SerializeField] SpriteRenderer laserBeamSr;
@@ -30,9 +33,10 @@ public class PlayerMain : MonoBehaviour
 
     [SerializeField] LayerMask enemyMask;
     [SerializeField] GameObject explosionPrefab;
+    [SerializeField] GameObject pushWavePrefab;
+    [SerializeField] GameObject missilePrefab;
 
     Vector3 cameraVelocity = Vector3.zero;
-
 
     private void Awake()
     {
@@ -51,6 +55,16 @@ public class PlayerMain : MonoBehaviour
     private void Update()
     {
         if (PauseMenu.Instance.GamePaused) return;
+
+        if (pushWave.WasPerformedThisFrame())
+        {
+            UsePushwave();
+        }
+        
+        if (fireMissle.WasPerformedThisFrame())
+        {
+            FireMissile();
+        }
 
         if (scaleChanger.ReadValue<float>() == 0 && !Input.GetMouseButton(0))
         {
@@ -185,6 +199,26 @@ public class PlayerMain : MonoBehaviour
         return Physics2D.CircleCastAll(origin, 0.5f, direction, 1000, enemyMask);
     }
 
+    void UsePushwave()
+    {
+        if (!EnablePushwave) return;
+
+        GameObject gob = Instantiate(pushWavePrefab);
+        gob.transform.position = transform.position + transform.right * 0.5f;
+        gob.transform.rotation = transform.rotation;
+        gob.SetActive(true);
+        gob.GetComponentInChildren<PushWave>().Init(gameObject);
+    }
+
+    void FireMissile()
+    {
+        if (!EnableMissiles) return;
+
+        GameObject gob = Instantiate(missilePrefab);
+        gob.transform.position = transform.position + transform.right * 0.5f;
+        gob.transform.rotation = transform.rotation;
+        gob.SetActive(true);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -197,6 +231,7 @@ public class PlayerMain : MonoBehaviour
     {
         GameObject gob = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         SoundManager.Instance.PlaySound("Explosion");
+        StopLaserBeam();
         Destroy(gameObject);
         FindAnyObjectByType<GrinderZone>().gameOver = true;
     }
@@ -205,10 +240,14 @@ public class PlayerMain : MonoBehaviour
     {
         movementControlsKeyboard.Enable();
         scaleChanger.Enable();
+        pushWave.Enable();
+        fireMissle.Enable();
     }
     private void OnDisable()
     {
         movementControlsKeyboard.Disable();
         scaleChanger.Disable();
+        pushWave.Disable();
+        fireMissle.Disable();
     }
 }

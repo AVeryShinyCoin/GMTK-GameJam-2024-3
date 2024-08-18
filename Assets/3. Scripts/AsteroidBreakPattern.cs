@@ -38,6 +38,7 @@ public class AsteroidBreakPattern : MonoBehaviour
             gob.SetActive(true);
             Rigidbody2D rb = gob.GetComponent<Rigidbody2D>();
             rb.velocity = velocity;
+            rb.mass = gob.transform.localScale.x;
             float rnd = Random.Range(300, 800);
             int mod = Random.Range(0, 2);
             if (mod == 1) rnd *= -1;

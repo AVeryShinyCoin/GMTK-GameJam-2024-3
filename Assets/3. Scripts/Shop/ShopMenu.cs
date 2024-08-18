@@ -7,9 +7,6 @@ public class ShopMenu : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI descriptionText;
 
-
-
-
     public void ShowDiscription(string description)
     {
         descriptionText.text = description;
@@ -22,6 +19,6 @@ public class ShopMenu : MonoBehaviour
 
     public void SpendMoney(int cost)
     {
-        PauseMenu.Instance.Score -= cost;
+        PauseMenu.Instance.AddScore(-cost);
     }
 }

@@ -54,6 +54,7 @@ MonoBehaviour:
   acceleration: 60
   TractorBeamPower: 1600
   RescaleBeamPower: 4
+  EnablePushwave: 0
   movementControlsKeyboard:
     m_Name: Movement Controls Keyboard
     m_Type: 0
@@ -136,6 +137,40 @@ MonoBehaviour:
       m_Action: Scale Changer
       m_Flags: 8
     m_Flags: 0
+  pushWave:
+    m_Name: Push Wave
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9dc6a553-7729-4852-b98c-68f9fe3c714a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 0091a357-fffa-42e5-ad7e-318ff4b07100
+      m_Path: <Mouse>/rightButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Push Wave
+      m_Flags: 0
+    m_Flags: 0
+  fireMissle:
+    m_Name: Fire Missle
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: cde921c0-2b4f-46de-a615-ff6ceff452e2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 938de5b0-6eaf-4c36-a964-df40db2d8946
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Fire Missle
+      m_Flags: 0
+    m_Flags: 0
   laserBeam: {fileID: 6656018409095569451}
   laserBeamSr: {fileID: 4234909688712948742}
   sizeIncreaseBeam: {fileID: -1596931088, guid: 6e15e6bd5aa137548abab01344e95859, type: 3}
@@ -145,6 +180,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   explosionPrefab: {fileID: 1643143370711004637, guid: 702137243a3103e4dac2870f99f9ff68, type: 3}
+  pushWavePrefab: {fileID: 7021506417402952707, guid: 6bcda2929f05b074ead47f745b537a25, type: 3}
+  missilePrefab: {fileID: 7213768096716240769, guid: 1632965b9bf896446889f8b687d1a941, type: 3}
 --- !u!50 &8319419258280763369
 Rigidbody2D:
   serializedVersion: 4
@@ -478,7 +515,7 @@ Transform:
   m_GameObject: {fileID: 7399433075465614454}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

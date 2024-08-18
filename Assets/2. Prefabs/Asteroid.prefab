@@ -252,7 +252,9 @@ MonoBehaviour:
   - 4.5
   - 6
   - 9
+  - 27
   breakPatternSmall: {fileID: 7652875715048236348, guid: 28ab1ed8a58a26140bdd5cd86c850acd, type: 3}
   breakPatternMedium: {fileID: 8989438591847977817, guid: 404345106e0ed8e4cb91fa8a04ab4fba, type: 3}
   breakPatternLarge: {fileID: 3905075240357497952, guid: 5d165406e66bbeb4eb1b45968e1422ed, type: 3}
   unitSpawned: {fileID: 1281236402272919775}
+  minimumSpeed: 750

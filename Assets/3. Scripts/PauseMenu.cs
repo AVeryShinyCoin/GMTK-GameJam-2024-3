@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class PauseMenu : MonoBehaviour
@@ -14,6 +15,8 @@ public class PauseMenu : MonoBehaviour
     [Space(20)]
     [SerializeField] InputAction toggleMenu;
     [SerializeField] InputAction toggleShop;
+    [SerializeField] InputAction resetGame;
+    [SerializeField] InputAction toggleMusic;
     [SerializeField] InputAction cat;
 
     [SerializeField] TextMeshProUGUI scoreText;
@@ -21,6 +24,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject shopMenu;
 
     public bool GamePaused;
+    bool musicPlaying = true;
 
     private void Awake()
     {
@@ -73,6 +77,17 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
+        if (resetGame.WasPerformedThisFrame())
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        
+        if (toggleMusic.WasPerformedThisFrame())
+        {
+            musicPlaying = !musicPlaying;
+            FindAnyObjectByType<SoundVolumeSetting>().ToggleMusic(musicPlaying);
+        }
+
         if (cat.WasPerformedThisFrame())
         {
             Debug.Log("triggered");
@@ -110,12 +125,16 @@ public class PauseMenu : MonoBehaviour
     {
         toggleMenu.Enable();
         toggleShop.Enable();
+        resetGame.Enable();
+        toggleMusic.Enable();
         cat.Enable();
     }
     private void OnDisable()
     {
         toggleMenu.Disable();
         toggleShop.Disable();
+        resetGame.Disable();
+        toggleMusic.Disable();
         cat.Disable();
     }
 }

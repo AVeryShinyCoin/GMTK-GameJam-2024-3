@@ -17,16 +17,19 @@ public class GrinderZone : MonoBehaviour
         {
             if (collision.transform.localScale.x < collision.GetComponent<AsteroidBreak>().scaleBoundires[0])
             {
-
-            
-
-            float scale = enemy.transform.localScale.x;
-            float addedScore = enemy.scoreValue * scale / 4;
-            PauseMenu.Instance.AddScore((int)addedScore);
-            GameObject gob = Instantiate(scoreTextPrefab);
-            gob.transform.position = collision.transform.position;
-            gob.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+$" + (int)addedScore;
-            Destroy(collision.gameObject);
+                SoundManager.Instance.PlaySoundRandomPitch("AsteroidBreak", 0.9f, 1.1f);
+                float scale = enemy.transform.localScale.x;
+                float addedScore = enemy.scoreValue * scale / 4;
+                PauseMenu.Instance.AddScore((int)addedScore);
+                GameObject gob = Instantiate(scoreTextPrefab);
+                gob.transform.position = collision.transform.position;
+                gob.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+$" + (int)addedScore;
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                enemy.BreakIntoPieces();
+                SoundManager.Instance.PlaySoundRandomPitch("AsteroidBreak", 0.7f, 1.0f);
             }
         }
 

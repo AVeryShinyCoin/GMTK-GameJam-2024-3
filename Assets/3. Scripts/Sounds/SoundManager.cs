@@ -56,11 +56,6 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-
-    }
-
     //All methods that play sound uses FindSound() to convert the requested string into the Sound to play
     private Sounds FindSound(string name)
     {

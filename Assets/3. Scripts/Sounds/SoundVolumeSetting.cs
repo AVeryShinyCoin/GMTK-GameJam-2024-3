@@ -29,4 +29,16 @@ public class SoundVolumeSetting : MonoBehaviour
         }
         mixer.SetFloat(MIXER_SFX, Mathf.Log10(value) * 20f);
     }
+
+    public void ToggleMusic(bool toggle)
+    {
+        if (!toggle)
+        {
+            mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(0.00001f) * 20f);
+        }
+        else
+        {
+            mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(1) * 20f);
+        }
+    }
 }
