@@ -5,22 +5,13 @@ using UnityEngine;
 
 public class AsteroidBreak : MonoBehaviour
 {
-    [SerializeField] float[] scaleBoundires;
+    public float[] scaleBoundires;
     [SerializeField] GameObject breakPatternSmall;
     [SerializeField] GameObject breakPatternMedium;
     [SerializeField] GameObject breakPatternLarge;
     [SerializeField] GameObject unitSpawned;
 
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(1))
-        {
-            InitiateBreakPattern();
-        }
-    }
-
-    void InitiateBreakPattern()
+    public void InitiateBreakPattern()
     {
         float scale = transform.localScale.x;
 
@@ -38,8 +29,7 @@ public class AsteroidBreak : MonoBehaviour
         {
             pattern.SpawnObjectInPattern(unitSpawned, i);
         }
-
-        pattern.ReleasePattern(transform.rotation.eulerAngles.z, Vector3.zero);
+        pattern.ReleasePattern(transform.rotation.eulerAngles.z, GetComponent<Rigidbody2D>().velocity * 0.80f);
 
         Destroy(gameObject);
     }

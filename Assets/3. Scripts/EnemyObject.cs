@@ -31,6 +31,11 @@ public class EnemyObject : MonoBehaviour
         }
     }
 
+    public void BreakIntoPieces()
+    {
+        GetComponent<AsteroidBreak>().InitiateBreakPattern();
+    }
+
     void BecomeDeletable()
     {
         cantBeDeleted = false;

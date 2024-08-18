@@ -29,13 +29,19 @@ public class AsteroidBreakPattern : MonoBehaviour
         breakAsteroids.Add(gob);
     }
 
-    public void ReleasePattern(float rot, Vector3 velocity) // velocity.z = speed
+    public void ReleasePattern(float rot, Vector2 velocity)
     {
         transform.rotation = Quaternion.Euler(0f, 0f, rot);
         foreach (GameObject gob in breakAsteroids)
         {
             gob.transform.SetParent(null);
             gob.SetActive(true);
+            Rigidbody2D rb = gob.GetComponent<Rigidbody2D>();
+            rb.velocity = velocity;
+            float rnd = Random.Range(300, 800);
+            int mod = Random.Range(0, 2);
+            if (mod == 1) rnd *= -1;
+            rb.AddTorque(rnd);
         }
         Destroy(gameObject);
     }
