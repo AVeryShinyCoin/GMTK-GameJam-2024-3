@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df6f178d50debb408e952e86796a41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 100
+  scoreValue: 50
   cantBeDeleted: 1
 --- !u!114 &8699497705930652564
 MonoBehaviour:

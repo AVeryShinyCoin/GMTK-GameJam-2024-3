@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] GameObject asteroidObject;
+    [SerializeField] GameObject[] asteroidObjects;
     [SerializeField] float[] asteroidSizeRange;
 
     [SerializeField] Collider2D[] spawnZones;
@@ -22,7 +22,8 @@ public class EnemySpawner : MonoBehaviour
         if (TurnOffSpawner) return;
 
         int rnd = Random.Range(0, spawnZones.Length);
-        GameObject gob = Instantiate(asteroidObject, RandomPointInBounds(spawnZones[rnd].bounds), Quaternion.identity);
+        int gobRnd = Random.Range(0, asteroidObjects.Length);
+        GameObject gob = Instantiate(asteroidObjects[gobRnd], RandomPointInBounds(spawnZones[rnd].bounds), Quaternion.identity);
 
         float scale = Random.Range(asteroidSizeRange[0], asteroidSizeRange[1]);
         int modScale = Random.Range(0, 10);

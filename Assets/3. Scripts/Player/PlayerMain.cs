@@ -9,8 +9,8 @@ public class PlayerMain : MonoBehaviour
     //[SerializeField] float rotSpeed;
     [SerializeField] float cameraSpeed;
     [SerializeField] float acceleration;
-    [SerializeField] float tractorBeamPower;
-    [SerializeField] float sizeChangePower;
+    public float TractorBeamPower;
+    public float RescaleBeamPower;
 
 
     [Space(20)]
@@ -50,6 +50,8 @@ public class PlayerMain : MonoBehaviour
 
     private void Update()
     {
+        if (PauseMenu.Instance.GamePaused) return;
+
         if (scaleChanger.ReadValue<float>() == 0 && !Input.GetMouseButton(0))
         {
             currentTarget = null;
@@ -86,7 +88,7 @@ public class PlayerMain : MonoBehaviour
 
         if (raycastHits[0].transform.TryGetComponent(out EnemyObject enemy))
         {
-            enemy.ChangeSize(value * sizeChangePower);
+            enemy.ChangeSize(value * RescaleBeamPower);
             currentTarget = raycastHits[0].transform;
         }
     }
@@ -97,7 +99,7 @@ public class PlayerMain : MonoBehaviour
 
         if (raycastHits[0].transform.TryGetComponent(out EnemyObject enemy))
         {
-            enemy.GetPulled(transform.position, tractorBeamPower);
+            enemy.GetPulled(transform.position, TractorBeamPower);
             currentTarget = raycastHits[0].transform;
         }
     }

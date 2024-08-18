@@ -5,22 +5,9 @@ using UnityEngine;
 
 public class GrinderZone : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] GameObject scoreTextPrefab;
-    int score;
 
     public bool gameOver;
-
-    private void Awake()
-    {
-        score = 0;
-        UpdateScore();
-    }
-
-    void UpdateScore()
-    {
-        scoreText.text = "Score: " + score + "$";
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,15 +17,12 @@ public class GrinderZone : MonoBehaviour
         {
             float scale = enemy.transform.localScale.x;
             float addedScore = enemy.scoreValue * scale / 4;
-            int intScore = (int)addedScore;
-            score += (int)addedScore;
-            UpdateScore();
 
-
+            PauseMenu.Instance.AddScore((int)addedScore);
 
             GameObject gob = Instantiate(scoreTextPrefab);
             gob.transform.position = collision.transform.position;
-            gob.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + (int)addedScore + "$";
+            gob.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+$" + (int)addedScore;
 
             Destroy(collision.gameObject);
         }
@@ -46,11 +30,10 @@ public class GrinderZone : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out PlayerMain player))
         {
             float addedScore = 300;
-            score += (int)addedScore;
-            UpdateScore();
+            PauseMenu.Instance.AddScore((int)addedScore);
             GameObject gob = Instantiate(scoreTextPrefab);
             gob.transform.position = collision.transform.position;
-            gob.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + (int)addedScore + "$";
+            gob.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+$" + (int)addedScore;
 
             player.GameOver();
         }
