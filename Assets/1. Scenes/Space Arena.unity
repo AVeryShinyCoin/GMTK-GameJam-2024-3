@@ -588,11 +588,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.3857956
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -34.91802
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalPosition.z
@@ -600,19 +600,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9990483
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.043619405
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -624,7 +624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -678,11 +678,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 71.385796
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -34.91802
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalPosition.z
@@ -690,19 +690,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9990483
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.043619405
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -714,7 +714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1810670564776668469, guid: fdba8fda7050ab942af1efdc3939eb32, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -1756,6 +1756,156 @@ MonoBehaviour:
     volumeChangeOriginal: 0
   - name: Explosion
     clip: {fileID: 8300000, guid: af4d84da971db3b41a70b65e7156d19d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: Peacock
+    clip: {fileID: 8300000, guid: c14e09e6b93030749b6ab9d1a0ef8baf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: ShipExplosion
+    clip: {fileID: 8300000, guid: ee1f882e265f7a64c85fb7e0f671c498, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: EngineStop
+    clip: {fileID: 8300000, guid: f36fa3aa720929043921a14670e795da, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: EngineStart
+    clip: {fileID: 8300000, guid: 1dfa8824172fed342a0b56633300530c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: EngineLoop
+    clip: {fileID: 8300000, guid: bc6c4f76b38f724448dcb24814345740, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: BeamStart
+    clip: {fileID: 8300000, guid: d4c4e3c2e983892468f17c69baef81d0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: BeamLoop
+    clip: {fileID: 8300000, guid: 78fcd56ea496a3e468ece066962a4395, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: BeamEnd
+    clip: {fileID: 8300000, guid: 78f9de9d969d5e14d90ea3b778004e49, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: MoleLoop
+    clip: {fileID: 8300000, guid: d0bdf242733853c45b8878578e85c4bb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: AsteroidBreak
+    clip: {fileID: 8300000, guid: c24059bf08d2ca7438f282949871290d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: Button1
+    clip: {fileID: 8300000, guid: 9cef4d656e4c92a43a095b44cff7c462, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: Button2
+    clip: {fileID: 8300000, guid: 28893ac6c441db442848e7a7a4ee7f55, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: Button3
+    clip: {fileID: 8300000, guid: b63a6b19d90e06c4d93f5e90ed46febf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: Button4
+    clip: {fileID: 8300000, guid: 71113a1ef2478da439a1f79ee5f19b84, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: BigButton
+    clip: {fileID: 8300000, guid: ff1ef798cdf851d478268edb712c34d8, type: 3}
     volume: 1
     pitch: 1
     loop: 0
