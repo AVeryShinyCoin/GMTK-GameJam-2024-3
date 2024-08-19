@@ -1854,7 +1854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: targetScore
-      value: 2000
+      value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 3444589967161955060, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_Camera
