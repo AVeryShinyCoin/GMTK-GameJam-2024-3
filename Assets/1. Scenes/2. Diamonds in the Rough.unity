@@ -194,15 +194,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 16387253548195842, guid: ab999077314e8fa41be6e17a6e191730, type: 3}
       propertyPath: EnemiesSpawned.Array.data[0].NumberOfCopiesInList
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 16387253548195842, guid: ab999077314e8fa41be6e17a6e191730, type: 3}
       propertyPath: EnemiesSpawned.Array.data[1].NumberOfCopiesInList
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 16387253548195842, guid: ab999077314e8fa41be6e17a6e191730, type: 3}
       propertyPath: EnemiesSpawned.Array.data[2].NumberOfCopiesInList
-      value: 3
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 16387253548195842, guid: ab999077314e8fa41be6e17a6e191730, type: 3}
       propertyPath: EnemiesSpawned.Array.data[3].NumberOfCopiesInList
@@ -1608,7 +1608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: targetScore
-      value: 6000
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 3444589967161955060, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_Camera
@@ -1624,6 +1624,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3760319874544085908, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671425084200168125, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
