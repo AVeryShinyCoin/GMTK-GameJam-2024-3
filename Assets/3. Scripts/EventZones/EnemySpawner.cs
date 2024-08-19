@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] bool TurnOffSpawner;
+    [SerializeField] float asteroidSpawnInterval;
     [SerializeField] List<Enemy> EnemiesSpawned = new();
 
     public List<Collider2D> SpawnZones;
@@ -13,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("SpawnAsteroid", 0f, 2.5f);
+        InvokeRepeating("SpawnAsteroid", asteroidSpawnInterval, asteroidSpawnInterval);
 
         List<Enemy> tempList = new();
         foreach (Enemy enemy in EnemiesSpawned)
