@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 1235214354, guid: ba90b42241fdbc14b877b386e61571b2, type: 3}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
-      value: Gold Asteroid Variant
+      value: Gold Asteroid
       objectReference: {fileID: 0}
     - target: {fileID: 5147804561171931632, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: scoreValue
-      value: 300
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 5147804561171931632, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: cantBeDeleted
