@@ -9,14 +9,12 @@ public class GameOverScreen : MonoBehaviour
     [SerializeField] GameObject failureText;
 
     [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] TextMeshProUGUI personalBestText;
 
 
     public void DisplayVictory(int score, int targetScore, int bestScore)
     {
-        scoreText.text = score + " / " + targetScore;
+        scoreText.text = score + " / " + targetScore + "<br>" + bestScore;
         scoreText.color = Color.green;
-        personalBestText.text = bestScore.ToString();
 
         failureText.SetActive(false);
         gameObject.SetActive(true);
@@ -24,9 +22,8 @@ public class GameOverScreen : MonoBehaviour
     
     public void DisplayFailure(int score, int targetScore, int bestScore)
     {
-        scoreText.text = score + " / " + targetScore;
+        scoreText.text = score + " / " + targetScore + "<br>" + bestScore;
         scoreText.color = Color.red;
-        personalBestText.text = bestScore.ToString();
 
         victoryText.SetActive(false);
         gameObject.SetActive(true);

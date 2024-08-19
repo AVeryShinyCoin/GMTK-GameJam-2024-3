@@ -314,6 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurnOffSpawner: 0
+  asteroidSpawnInterval: 2.5
   EnemiesSpawned:
   - NumberOfCopiesInList: 17
     EnemyPrefab: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}

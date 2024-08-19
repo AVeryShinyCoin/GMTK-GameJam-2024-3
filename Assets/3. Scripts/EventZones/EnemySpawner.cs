@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -11,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
     public List<Collider2D> SpawnZones;
     [SerializeField] Collider2D targetZone;
 
+    int nextAsteroidToSpawn;
 
     private void Start()
     {
@@ -24,7 +26,15 @@ public class EnemySpawner : MonoBehaviour
                 tempList.Add(new Enemy(enemy));
             }
         }
-        EnemiesSpawned = new(tempList);
+        List<Enemy> shuffledList = new List<Enemy>();
+        while (tempList.Any())
+        {
+            int rnd = Random.Range(0, tempList.Count());
+            shuffledList.Add(tempList[rnd]);
+            tempList.RemoveAt(rnd);
+        }
+        EnemiesSpawned = new(shuffledList);
+        nextAsteroidToSpawn = 0;
     }
 
     void SpawnAsteroid()
@@ -37,7 +47,8 @@ public class EnemySpawner : MonoBehaviour
         }
 
         int spawnZoneRnd = Random.Range(0, SpawnZones.Count);
-        int enemRnd = Random.Range(0, EnemiesSpawned.Count);
+        //int enemRnd = Random.Range(0, EnemiesSpawned.Count);
+        int enemRnd = nextAsteroidToSpawn;
 
         GameObject gob = Instantiate(EnemiesSpawned[enemRnd].EnemyPrefab, RandomPointInBounds(SpawnZones[spawnZoneRnd].bounds), Quaternion.identity);
 
@@ -69,6 +80,9 @@ public class EnemySpawner : MonoBehaviour
         int mod = Random.Range(0, 2);
         if (mod == 1) spinRnd *= -1;
         rb.AddTorque(spinRnd);
+
+        nextAsteroidToSpawn++;
+        if (nextAsteroidToSpawn >= EnemiesSpawned.Count) nextAsteroidToSpawn = 0;
     }
 
 
@@ -97,5 +111,10 @@ public class EnemySpawner : MonoBehaviour
             SpinRange = enemy.SpinRange;
             DisableExtremeSizeDifferenceChance = enemy.DisableExtremeSizeDifferenceChance;
         }
+    }
+
+    void ShuffleDeckList(ref List<GameObject> deckList)
+    {
+        
     }
 }

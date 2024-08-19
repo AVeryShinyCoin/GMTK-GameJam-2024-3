@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject shopMenu;
 
     [SerializeField] GameOverScreen gameOverScreen;
-
+    [SerializeField] WinCondition winCondition;
 
     public bool GamePaused;
     bool musicPlaying = true;
@@ -50,6 +50,10 @@ public class PauseMenu : MonoBehaviour
             TogglePauseGame(true);
         }
         AddScore(0);
+        if (winCondition != null)
+        {
+            winCondition.StartTimer();
+        }
     }
 
     private void Update()
@@ -107,6 +111,7 @@ public class PauseMenu : MonoBehaviour
 
     void TogglePauseGame(bool toggle)
     {
+        if (GameOver) return;
         GamePaused = toggle;
 
         if (GamePaused)
@@ -122,11 +127,21 @@ public class PauseMenu : MonoBehaviour
     public void AddScore(int value)
     {
         Score += value;
-        scoreText.text = "Cash: $" + Score;
+        scoreText.text = "$" + Score;
+        if (winCondition != null)
+        {
+            winCondition.UpdateSlider(Score);
+            if (winCondition.QoutaReached)
+            {
+                scoreText.color = Color.green;
+            }
+        }
     }
 
     public void EndGame(int targetScore)
     {
+        TogglePauseGame(true);
+        GameOver = true;
         if (Score >= targetScore)
         {
             gameOverScreen.DisplayVictory(Score, targetScore, 0);

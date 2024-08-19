@@ -953,6 +953,7 @@ MonoBehaviour:
   introScreen: {fileID: 2775165622802768742}
   shopMenu: {fileID: 7794675575620506798}
   gameOverScreen: {fileID: 5644290448082386078}
+  winCondition: {fileID: 3199989148316630203}
   GamePaused: 0
 --- !u!223 &3444589967161955060
 Canvas:
@@ -1781,6 +1782,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a83033543b03a428b5b8d2e94c0e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missionTime: 120
+  targetScore: 1000
+  targetText: {fileID: 7218912716661589232}
+  timerText: {fileID: 2255836234253453784}
+  slider: {fileID: 537417865405602731}
+  QoutaReached: 0
 --- !u!1 &3635019740891439533
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,10 +2578,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acdfeec11bf8ead4bb260767aaa76982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victoryText: {fileID: 0}
-  failureText: {fileID: 0}
-  scoreText: {fileID: 0}
-  personalBestText: {fileID: 0}
+  victoryText: {fileID: 6684846628147823964}
+  failureText: {fileID: 2952610358362144635}
+  scoreText: {fileID: 2350557543046132968}
 --- !u!1 &5295508079140946125
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,7 +3067,6 @@ MonoBehaviour:
   victoryText: {fileID: 0}
   failureText: {fileID: 0}
   scoreText: {fileID: 0}
-  personalBestText: {fileID: 0}
 --- !u!1 &6245049090352872229
 GameObject:
   m_ObjectHideFlags: 0
@@ -4178,7 +4183,6 @@ MonoBehaviour:
   victoryText: {fileID: 0}
   failureText: {fileID: 0}
   scoreText: {fileID: 0}
-  personalBestText: {fileID: 0}
 --- !u!1 &7802621010877345730
 GameObject:
   m_ObjectHideFlags: 0
