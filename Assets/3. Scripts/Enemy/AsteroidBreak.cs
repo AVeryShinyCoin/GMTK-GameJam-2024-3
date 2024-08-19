@@ -22,6 +22,7 @@ public class AsteroidBreak : MonoBehaviour
 
     [Space(10)]
     [SerializeField] float minimumSpeed;
+    [SerializeField] float resistancePower;
 
     private void Awake()
     {
@@ -33,7 +34,7 @@ public class AsteroidBreak : MonoBehaviour
         float scale = transform.localScale.x;
         float minimumForce = (minimumSpeed / (scale * 0.3f));
         float impactForce = collision.relativeVelocity.magnitude * collision.transform.localScale.x * transform.localScale.x;
-        float resistance = Mathf.Pow(transform.localScale.x, 3);
+        float resistance = Mathf.Pow(transform.localScale.x, resistancePower);
 
 
         //Debug.Log(gameObject.name + ": ImpactForce " + impactForce + ", minForce: " + minimumForce + ", resistance: " + resistance);
@@ -123,6 +124,10 @@ public class AsteroidBreak : MonoBehaviour
             GameObject gob = Instantiate(diamondPrefab, spawnPos, spawnRot);
 
             gob.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+
+
+            Vector2 scatterForce = new Vector2(UnityEngine.Random.Range(-1, 1), UnityEngine.Random.Range(-1, 1)).normalized;
+            gob.GetComponent<Rigidbody2D>().AddForce(scatterForce * UnityEngine.Random.Range(100f, 200f));
 
             number--;
         }
