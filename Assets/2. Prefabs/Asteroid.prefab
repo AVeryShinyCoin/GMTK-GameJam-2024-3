@@ -258,7 +258,8 @@ MonoBehaviour:
   breakPatternMedium: {fileID: 8989438591847977817, guid: 404345106e0ed8e4cb91fa8a04ab4fba, type: 3}
   breakPatternLarge: {fileID: 3905075240357497952, guid: 5d165406e66bbeb4eb1b45968e1422ed, type: 3}
   unitSpawned: {fileID: 1281236402272919775}
-  spawnDiamonds: 0
+  SpawnDiamondsOnDestroy: 0
   diamondPrefab: {fileID: 7633998758599962063, guid: 1e24f9aee3dee2a42b9969bda4f05f23, type: 3}
   diamondAsteroidPrefab: {fileID: 5621438056348050345, guid: 24cc491164bbe06419d7da152a3bfb68, type: 3}
-  minimumSpeed: 750
+  minimumSpeed: 600
+  resistancePower: 2.75
