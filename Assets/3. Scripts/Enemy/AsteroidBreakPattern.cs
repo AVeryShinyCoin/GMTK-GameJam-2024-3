@@ -29,7 +29,7 @@ public class AsteroidBreakPattern : MonoBehaviour
         breakAsteroids.Add(gob);
     }
 
-    public void ReleasePattern(float rot, Vector2 velocity)
+    public List<GameObject> ReleasePattern(float rot, Vector2 velocity)
     {
         transform.rotation = Quaternion.Euler(0f, 0f, rot);
         foreach (GameObject gob in breakAsteroids)
@@ -45,5 +45,7 @@ public class AsteroidBreakPattern : MonoBehaviour
             rb.AddTorque(rnd);
         }
         Destroy(gameObject);
+
+        return new(breakAsteroids);
     }
 }

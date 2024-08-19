@@ -179,7 +179,7 @@ MonoBehaviour:
   tractorBeam: {fileID: 1214919612, guid: 6e15e6bd5aa137548abab01344e95859, type: 3}
   enemyMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   explosionPrefab: {fileID: 1643143370711004637, guid: 702137243a3103e4dac2870f99f9ff68, type: 3}
   pushWavePrefab: {fileID: 7021506417402952707, guid: 6bcda2929f05b074ead47f745b537a25, type: 3}
   missilePrefab: {fileID: 7213768096716240769, guid: 1632965b9bf896446889f8b687d1a941, type: 3}

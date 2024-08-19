@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 16387253548195842, guid: ab999077314e8fa41be6e17a6e191730, type: 3}
+      propertyPath: TurnOffSpawner
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 790362633201212226, guid: ab999077314e8fa41be6e17a6e191730, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -958,6 +962,10 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4001713174984837714, guid: e544c4bc54bb1784bba88cede881b1ff, type: 3}
+      propertyPath: EnableMissiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001713174984837714, guid: e544c4bc54bb1784bba88cede881b1ff, type: 3}
       propertyPath: minimumSpeedToDie
       value: 10
       objectReference: {fileID: 0}
@@ -1118,13 +1126,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2069994988427804907, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
+      propertyPath: testMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2775165622802768742, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: missionTime
-      value: 10
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: targetScore

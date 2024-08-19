@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static EnemySpawner;
 
 public class PlayerMain : MonoBehaviour
 {
@@ -107,24 +108,26 @@ public class PlayerMain : MonoBehaviour
 
     void SizeChangeBeam(float value)
     {
-        RaycastHit2D[] raycastHits = RaycastEnemy();
-        if (raycastHits.Length == 0) return;
+        currentTarget = RaycastEnemy();
+        if (currentTarget == null) return;
 
-        if (raycastHits[0].transform.TryGetComponent(out EnemyObject enemy))
+        if (currentTarget.TryGetComponent(out EnemyObject enemy))
         {
             enemy.ChangeSize(value * RescaleBeamPower);
-            currentTarget = raycastHits[0].transform;
         }
     }
     void TractorBeam()
     {
-        RaycastHit2D[] raycastHits = RaycastEnemy();
-        if (raycastHits.Length == 0) return;
+        currentTarget = RaycastEnemy();
+        if (currentTarget == null) return;
 
-        if (raycastHits[0].transform.TryGetComponent(out EnemyObject enemy))
+        if (currentTarget.TryGetComponent(out EnemyObject enemy))
         {
             enemy.GetPulled(transform.position, TractorBeamPower);
-            currentTarget = raycastHits[0].transform;
+        }
+        else if (currentTarget.TryGetComponent(out Diamond diamond))
+        {
+            diamond.GetPulled(transform.position, TractorBeamPower);
         }
     }
 
@@ -202,11 +205,58 @@ public class PlayerMain : MonoBehaviour
         laserBeam.gameObject.SetActive(true);
     }
 
-    RaycastHit2D[] RaycastEnemy()
+    Transform RaycastEnemy()
     {
         Vector2 origin = transform.position;
         Vector2 direction = transform.right;
-        return Physics2D.CircleCastAll(origin, 0.5f, direction, 1000, enemyMask);
+        RaycastHit2D[] raycastHits = Physics2D.CircleCastAll(origin, 0.5f, direction, 1000, enemyMask);
+
+        if (raycastHits.Length == 0) return null;
+
+        int targetIndex = 0;
+        // If multiple hits are in array, check first if it contains current target. If not, find closest target
+        if (raycastHits.Length > 1)
+        {
+            bool containsCurrentTarget = false;
+            for (int i = 0; i < raycastHits.Length; i++)
+            {
+                if (raycastHits[i].collider.transform == currentTarget)
+                {
+                    targetIndex = i;
+                    containsCurrentTarget = true;
+                    break;
+                }
+            }
+            if (!containsCurrentTarget)
+            {
+                Transform closestTarget = raycastHits[0].transform;
+                float closestDistance = Vector2.Distance(transform.position, closestTarget.position);
+
+                for (int i = 1; i < raycastHits.Length; i++)
+                {
+                    float distance = Vector2.Distance(transform.position, raycastHits[i].collider.transform.position);
+                    if (distance < closestDistance)
+                    {
+                        closestTarget = raycastHits[i].transform;
+                        closestDistance = distance;
+                        targetIndex = i;
+                    }
+                }
+            }
+        }
+
+        if (raycastHits[targetIndex].transform.TryGetComponent(out EnemyObject enemy))
+        {
+            return raycastHits[targetIndex].transform;
+        }
+        else if (raycastHits[targetIndex].transform.TryGetComponent(out Diamond diamond))
+        {
+            return raycastHits[targetIndex].transform;
+        }
+        else
+        {
+            return null;
+        }
     }
 
     void UsePushwave()

@@ -15,7 +15,9 @@ public class GrinderZone : MonoBehaviour
 
         if (collision.gameObject.TryGetComponent(out EnemyObject enemy))
         {
-            if (collision.transform.localScale.x < collision.GetComponent<AsteroidBreak>().scaleBoundires[0])
+            AsteroidBreak asteroidBreak = collision.GetComponent<AsteroidBreak>();
+
+            if (collision.transform.localScale.x < asteroidBreak.scaleBoundires[0])
             {
                 SoundManager.Instance.PlaySoundRandomPitch("AsteroidBreak", 0.9f, 1.1f);
                 float scale = enemy.transform.localScale.x;
@@ -24,13 +26,23 @@ public class GrinderZone : MonoBehaviour
                 GameObject gob = Instantiate(scoreTextPrefab);
                 gob.transform.position = collision.transform.position;
                 gob.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+$" + (int)addedScore;
-                Destroy(collision.gameObject);
+                asteroidBreak.DestroyAsteroid();
             }
             else
             {
                 enemy.BreakIntoPieces();
                 SoundManager.Instance.PlaySoundRandomPitch("AsteroidBreak", 0.7f, 1.0f);
             }
+        }
+
+        if (collision.gameObject.TryGetComponent(out Diamond diamond))
+        {
+            SoundManager.Instance.PlaySoundRandomPitch("AsteroidBreak", 1.5f, 1.6f);
+            GameObject gob = Instantiate(scoreTextPrefab);
+            gob.transform.position = collision.transform.position;
+            gob.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.red;
+            gob.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Gem Lost!";
+            Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.TryGetComponent(out PlayerMain player))

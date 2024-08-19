@@ -11,6 +11,12 @@ public class AsteroidBreak : MonoBehaviour
     [SerializeField] GameObject breakPatternLarge;
     [SerializeField] GameObject unitSpawned;
 
+    [Space(10)]
+    public bool SpawnDiamondsOnDestroy;
+    [SerializeField] GameObject diamondPrefab;
+    [SerializeField] GameObject diamondAsteroidPrefab;
+
+
     Rigidbody2D rb;
     Vector2 lastVelocity;
 
@@ -69,15 +75,56 @@ public class AsteroidBreak : MonoBehaviour
 
         for (int i = 0; i < pattern.NumberOfBreaks; i++)
         {
-            pattern.SpawnObjectInPattern(unitSpawned, i);
+            if (SpawnDiamondsOnDestroy)
+            {
+                if (UnityEngine.Random.Range(0, 8) == 0)
+                {
+                    pattern.SpawnObjectInPattern(diamondAsteroidPrefab, i);
+                }
+                else
+                {
+                    pattern.SpawnObjectInPattern(unitSpawned, i);
+                }
+            }
+            else
+            {
+                pattern.SpawnObjectInPattern(unitSpawned, i);
+            }
         }
-        pattern.ReleasePattern(transform.rotation.eulerAngles.z, GetComponent<Rigidbody2D>().velocity * 1.2f);
+        List<GameObject> childAsteroids = pattern.ReleasePattern(transform.rotation.eulerAngles.z, GetComponent<Rigidbody2D>().velocity * 1.2f);
+
+        if (SpawnDiamondsOnDestroy)
+        {
+            SpawnDiamonds();
+        }
+
 
         Destroy(gameObject);
     }
 
     public void DestroyAsteroid()
     {
+        if (SpawnDiamondsOnDestroy)
+        {
+            SpawnDiamonds();
+        }
         Destroy(gameObject);
+    }
+
+    public void SpawnDiamonds()
+    {
+        int number = (int)(transform.localScale.x / 2) + 1;
+        while (number > 0)
+        {
+            float spawnScale = transform.localScale.x * 0.85f;
+            Vector2 spawnPos = (Vector2)transform.position +
+                new Vector2(UnityEngine.Random.Range(-spawnScale, spawnScale), UnityEngine.Random.Range(-spawnScale, spawnScale));
+            Quaternion spawnRot = Quaternion.Euler(0, 0, UnityEngine.Random.Range(0, 360));
+            GameObject gob = Instantiate(diamondPrefab, spawnPos, spawnRot);
+
+            gob.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+
+            number--;
+        }
     }
 }

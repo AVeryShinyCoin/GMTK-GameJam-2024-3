@@ -174,6 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35dff16fa42c56d4e98b80d4175bc7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinValueRange: {x: 150, y: 400}
 --- !u!60 &2101250093247563996
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -257,4 +258,7 @@ MonoBehaviour:
   breakPatternMedium: {fileID: 8989438591847977817, guid: 404345106e0ed8e4cb91fa8a04ab4fba, type: 3}
   breakPatternLarge: {fileID: 3905075240357497952, guid: 5d165406e66bbeb4eb1b45968e1422ed, type: 3}
   unitSpawned: {fileID: 1281236402272919775}
+  spawnDiamonds: 0
+  diamondPrefab: {fileID: 7633998758599962063, guid: 1e24f9aee3dee2a42b9969bda4f05f23, type: 3}
+  diamondAsteroidPrefab: {fileID: 5621438056348050345, guid: 24cc491164bbe06419d7da152a3bfb68, type: 3}
   minimumSpeed: 750
