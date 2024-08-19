@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreTextPrefab: {fileID: 1546912168461468910, guid: c8233fb67c05e644a9ee69e33b58a6c9, type: 3}
-  ScoreValue: 100
+  ScoreValue: 150
 --- !u!114 &3954496494159655843
 MonoBehaviour:
   m_ObjectHideFlags: 0
