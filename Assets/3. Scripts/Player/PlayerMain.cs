@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMain : MonoBehaviour
 {
-    //[SerializeField] float rotSpeed;
+    public static PlayerMain Instance;
+
     [SerializeField] float cameraSpeed;
     [SerializeField] float acceleration;
     public float TractorBeamPower;
@@ -40,6 +41,15 @@ public class PlayerMain : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
 

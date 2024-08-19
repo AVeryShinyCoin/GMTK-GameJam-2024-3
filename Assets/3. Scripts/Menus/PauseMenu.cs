@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public static PauseMenu Instance;
     [SerializeField] bool testMode;
     public int Score;
+    public bool GameOver;
 
     [Space(20)]
     [SerializeField] InputAction toggleMenu;
@@ -20,8 +21,11 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] InputAction cat;
 
     [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] GameObject instructionsText;
+    [SerializeField] GameObject introScreen;
     [SerializeField] GameObject shopMenu;
+
+    [SerializeField] GameOverScreen gameOverScreen;
+
 
     public bool GamePaused;
     bool musicPlaying = true;
@@ -42,7 +46,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (!testMode)
         {
-            instructionsText.SetActive(true);
+            introScreen.SetActive(true);
             TogglePauseGame(true);
         }
         AddScore(0);
@@ -59,7 +63,7 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
-                instructionsText.SetActive(true);
+                introScreen.SetActive(true);
                 TogglePauseGame(true);
             }
         }
@@ -97,7 +101,7 @@ public class PauseMenu : MonoBehaviour
 
     void UntoggleMenus()
     {
-        instructionsText.SetActive(false);
+        introScreen.SetActive(false);
         shopMenu.SetActive(false);
     }
 
@@ -120,6 +124,19 @@ public class PauseMenu : MonoBehaviour
         Score += value;
         scoreText.text = "Cash: $" + Score;
     }
+
+    public void EndGame(int targetScore)
+    {
+        if (Score >= targetScore)
+        {
+            gameOverScreen.DisplayVictory(Score, targetScore, 0);
+        }
+        else
+        {
+            gameOverScreen.DisplayFailure(Score, targetScore, 0);
+        }
+    }
+
 
     private void OnEnable()
     {

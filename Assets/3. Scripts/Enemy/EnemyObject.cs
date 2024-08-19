@@ -7,12 +7,12 @@ public class EnemyObject : MonoBehaviour
 
     Rigidbody2D rb;
     public float scoreValue;
-    public bool cantBeDeleted = true;
+    [SerializeField] float deleteDistance;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        Invoke("BecomeDeletable", 5f);
+        InvokeRepeating("DeleteSelfIfTooFarAwayFromPlayer", 5 + Random.Range(0, 2), 2);
     }
 
     public void GetPulled(Vector2 destination, float force)
@@ -31,13 +31,18 @@ public class EnemyObject : MonoBehaviour
         }
     }
 
+    public void DeleteSelfIfTooFarAwayFromPlayer()
+    {
+        if (PlayerMain.Instance == null) return;
+
+        if (Vector2.Distance(transform.position, PlayerMain.Instance.transform.position) > deleteDistance)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void BreakIntoPieces()
     {
         GetComponent<AsteroidBreak>().InitiateBreakPattern();
-    }
-
-    void BecomeDeletable()
-    {
-        cantBeDeleted = false;
     }
 }
