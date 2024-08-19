@@ -14,8 +14,7 @@ public class PauseMenu : MonoBehaviour
     public bool GameOver;
 
     [Space(20)]
-    [SerializeField] InputAction toggleMenu;
-    [SerializeField] InputAction toggleShop;
+    [SerializeField] InputAction togglePause;
     [SerializeField] InputAction resetGame;
     [SerializeField] InputAction toggleMusic;
     [SerializeField] InputAction cat;
@@ -29,6 +28,7 @@ public class PauseMenu : MonoBehaviour
 
     public bool GamePaused;
     bool musicPlaying = true;
+    bool firstUnpause = true;
 
     private void Awake()
     {
@@ -39,6 +39,7 @@ public class PauseMenu : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
     }
 
@@ -50,7 +51,8 @@ public class PauseMenu : MonoBehaviour
             TogglePauseGame(true);
         }
         AddScore(0);
-        if (winCondition != null)
+        if (winCondition != null
+            && SceneManager.GetActiveScene().buildIndex != 1)
         {
             winCondition.StartTimer();
         }
@@ -58,20 +60,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if (toggleMenu.WasPerformedThisFrame())
-        {
-            if (GamePaused)
-            {
-                UntoggleMenus();
-                TogglePauseGame(false);
-            }
-            else
-            {
-                introScreen.SetActive(true);
-                TogglePauseGame(true);
-            }
-        }
-        if (toggleShop.WasPerformedThisFrame())
+        if (togglePause.WasPerformedThisFrame())
         {
             if (GamePaused)
             {
@@ -82,6 +71,13 @@ public class PauseMenu : MonoBehaviour
             {
                 shopMenu.SetActive(true);
                 TogglePauseGame(true);
+            }
+
+            if (firstUnpause)
+            {
+                firstUnpause = false;
+                Tutorial0 tutorial = FindAnyObjectByType<Tutorial0>();
+                if (tutorial != null) tutorial.TutorialStart();
             }
         }
 
@@ -138,10 +134,20 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void InvokeGameOver()
+    {
+        Invoke("EndGamePlayerDeath", 2f);
+        GameOver = true;
+    }
+    public void EndGamePlayerDeath()
+    {
+        EndGame(winCondition.TargetScore);
+    }
     public void EndGame(int targetScore)
     {
-        TogglePauseGame(true);
+        Time.timeScale = 0;
         GameOver = true;
+        GamePaused = true;
         if (Score >= targetScore)
         {
             gameOverScreen.DisplayVictory(Score, targetScore, 0);
@@ -155,16 +161,14 @@ public class PauseMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        toggleMenu.Enable();
-        toggleShop.Enable();
+        togglePause.Enable();
         resetGame.Enable();
         toggleMusic.Enable();
         cat.Enable();
     }
     private void OnDisable()
     {
-        toggleMenu.Disable();
-        toggleShop.Disable();
+        togglePause.Disable();
         resetGame.Disable();
         toggleMusic.Disable();
         cat.Disable();

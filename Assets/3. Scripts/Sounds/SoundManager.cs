@@ -34,7 +34,6 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        DontDestroyOnLoad(gameObject);
 
         // This populates the class:Sounds array at the start of the game
         // Variables can be customized in the inspector
@@ -80,6 +79,27 @@ public class SoundManager : MonoBehaviour
         s.source.Stop();
         s.source.pitch = s.pitch;
         s.source.Play();
+    }
+
+    public void StopSound(string name)
+    {
+        Sounds s = FindSound(name);
+        if (s.source == null)
+        {
+            return;
+        }
+        s.source.Stop();
+    }
+
+    public void StopMusic()
+    {
+        foreach (Sounds s in sounds)
+        {
+            if (s.name.StartsWith("bgm"))
+            {
+                s.source.Stop();
+            }
+        }
     }
 
     // Plays sound with custom pitch

@@ -24,7 +24,7 @@ public class PushWave : MonoBehaviour
     public void Init(GameObject ship)
     {
         force = ((Vector2)transform.position - (Vector2)ship.transform.position).normalized  * pushPower;
-        ship.GetComponent<Rigidbody2D>().AddForce(-force * 0.2f);
+        ship.GetComponent<Rigidbody2D>().AddForce(-force * 0.1f);
     }
 
     private void FixedUpdate()

@@ -15,6 +15,8 @@ public class PlayerMain : MonoBehaviour
     public float RescaleBeamPower;
     public bool EnablePushwave;
     public bool EnableMissiles;
+    public bool EnableTractorBeam;
+    public bool EnableSizeChange;
 
     [Space(20)]
     [SerializeField] InputAction movementControlsKeyboard;
@@ -49,6 +51,7 @@ public class PlayerMain : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
 
         rb = GetComponent<Rigidbody2D>();
@@ -84,14 +87,14 @@ public class PlayerMain : MonoBehaviour
             return;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && EnableTractorBeam)
         {
             TractorBeam();
             laserBeamSr.sprite = tractorBeam;
             if (!shootingLaser) StartLaserBeam();
         }
 
-        if (scaleChanger.ReadValue<float>() != 0)
+        if (scaleChanger.ReadValue<float>() != 0 && EnableSizeChange)
         {
             SizeChangeBeam(scaleChanger.ReadValue<float>());
             if (scaleChanger.ReadValue<float>() < 0)
@@ -292,8 +295,8 @@ public class PlayerMain : MonoBehaviour
         GameObject gob = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         SoundManager.Instance.PlaySound("Explosion");
         StopLaserBeam();
+        PauseMenu.Instance.InvokeGameOver();
         Destroy(gameObject);
-        FindAnyObjectByType<GrinderZone>().gameOver = true;
     }
 
     private void OnEnable()

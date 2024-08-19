@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadSceneButton : MonoBehaviour
+public class ReloadLevel : MonoBehaviour
 {
-    [SerializeField] int sceneIndex;
-
     public void OnButtonPress()
     {
         SoundManager.Instance.StopMusic();
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -8,7 +8,7 @@ public class WinCondition : MonoBehaviour
 {
     [SerializeField] float missionTime;
     float timeRemaining;
-    public int targetScore;
+    public int TargetScore;
 
     [SerializeField] TextMeshProUGUI targetText;
     [SerializeField] TextMeshProUGUI timerText;
@@ -19,8 +19,8 @@ public class WinCondition : MonoBehaviour
 
     private void Start()
     {
-        targetText.text = "QOUTA: $" + targetScore;
-        timerText.text = "TIME: $" + targetScore;
+        targetText.text = "QOUTA: $" + TargetScore;
+        timerText.text = "TIME: $" + TargetScore;
         timeRemaining = missionTime;
     }
 
@@ -57,14 +57,14 @@ public class WinCondition : MonoBehaviour
         else
         {
             timerText.text = "TIME: 00:00";
-            PauseMenu.Instance.EndGame(targetScore);
+            PauseMenu.Instance.EndGame(TargetScore);
         }
     }
 
     public void UpdateSlider(int score)
     {
         if (QoutaReached) return;
-        float value = (float)score / (float)targetScore;
+        float value = (float)score / (float)TargetScore;
         if (value >= 1)
         {
             QoutaReached = true;
