@@ -61,11 +61,6 @@ public class PlayerMain : MonoBehaviour
         laserBeam.gameObject.SetActive(false);
     }
 
-    private void Start()
-    {
-        SoundManager.Instance.PlayMusic("bgmMusic");
-    }
-
     private void Update()
     {
         if (PauseMenu.Instance.GamePaused) return;

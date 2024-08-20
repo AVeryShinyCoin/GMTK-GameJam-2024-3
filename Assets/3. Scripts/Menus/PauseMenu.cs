@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static PauseMenu Instance;
     [SerializeField] bool testMode;
+    [SerializeField] string musicTrack;
     public int Score;
     public bool GameOver;
 
@@ -56,6 +57,8 @@ public class PauseMenu : MonoBehaviour
         {
             winCondition.StartTimer();
         }
+        SoundManager.Instance.StopMusic();
+        SoundManager.Instance.PlayMusic(musicTrack);
     }
 
     private void Update()

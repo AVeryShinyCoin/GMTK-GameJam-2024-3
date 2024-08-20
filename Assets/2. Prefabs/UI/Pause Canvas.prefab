@@ -989,6 +989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testMode: 0
+  musicTrack: bgmMusic
   Score: 0
   GameOver: 0
   togglePause:
@@ -2076,6 +2077,12 @@ MonoBehaviour:
   timerText: {fileID: 2255836234253453784}
   slider: {fileID: 537417865405602731}
   QuotaReached: 0
+  InfiniteMode: 0
+  multiplier: 0
+  currentMultiplier: 0
+  cyclesComplete: 0
+  TotalTime: 0
+  QuotaTime: 0
 --- !u!1 &3635019740891439533
 GameObject:
   m_ObjectHideFlags: 0
