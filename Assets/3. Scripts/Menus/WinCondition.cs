@@ -24,6 +24,8 @@ public class WinCondition : MonoBehaviour
     [SerializeField] float currentMultiplier;
     float originalTarget;
     public int cyclesComplete;
+    public float TotalTime;
+    public float QuotaTime;
 
     private void Start()
     {
@@ -51,6 +53,7 @@ public class WinCondition : MonoBehaviour
         if (!timerEnabled) return;
 
         timeRemaining -= Time.deltaTime;
+        TotalTime += Time.deltaTime;
 
         if (timeRemaining > 0)
         {
@@ -87,18 +90,25 @@ public class WinCondition : MonoBehaviour
             QuotaReached = true;
             value = 1;
             targetText.color = Color.green;
-            SoundManager.Instance.PlaySound("Quota");
+            
+            if (!InfiniteMode) SoundManager.Instance.PlaySound("Quota");
         } 
         slider.value = value;
     }
 
     void InfiniteModeNextStage()
     {
-        if (PauseMenu.Instance.Score >= TargetScore)
+        if (QuotaReached)
         {
-            timeRemaining = 30;
+            SoundManager.Instance.PlaySound("Quota");
+            timeRemaining = QuotaTime;
             TargetScore += (int)(originalTarget * currentMultiplier);
             currentMultiplier *= multiplier;
+            targetText.text = "QOUTA: $" + TargetScore;
+            targetText.color = Color.white;
+            cyclesComplete++;
+            QuotaReached = false;
+            UpdateSlider(PauseMenu.Instance.Score);
         }
         else
         {

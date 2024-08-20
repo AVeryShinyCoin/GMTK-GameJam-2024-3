@@ -156,11 +156,11 @@ public class PauseMenu : MonoBehaviour
         SoundManager.Instance.StopSound("TractorBeamLoop");
         if (Score >= targetScore || winCondition.InfiniteMode)
         {
-            gameOverScreen.DisplayVictory(Score, targetScore, 0);
+            gameOverScreen.DisplayVictory(Score, targetScore);
         }
         else
         {
-            gameOverScreen.DisplayFailure(Score, targetScore, 0);
+            gameOverScreen.DisplayFailure(Score, targetScore);
         }
     }
 

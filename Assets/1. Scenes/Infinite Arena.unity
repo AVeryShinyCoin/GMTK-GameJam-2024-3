@@ -377,6 +377,22 @@ PrefabInstance:
       propertyPath: togglePause.m_Name
       value: Toggle Pause
       objectReference: {fileID: 0}
+    - target: {fileID: 2295915839226521062, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
+      propertyPath: m_text
+      value: 'Score:
+
+        Quotas complete:
+
+        Time:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2350557543046132968, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
+      propertyPath: m_text
+      value: '100000000
+
+        8
+
+        10:00'
+      objectReference: {fileID: 0}
     - target: {fileID: 2499783934797430580, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -17.400024
@@ -384,6 +400,14 @@ PrefabInstance:
     - target: {fileID: 2775165622802768742, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
+      propertyPath: QuotaTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
+      propertyPath: multiplier
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: TargetScore
@@ -396,6 +420,10 @@ PrefabInstance:
     - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: targetScore
       value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
+      propertyPath: InfiniteMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3414292439226386388, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_hasFontAssetChanged
@@ -423,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5110796613842269995, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5561046223081172414, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_hasFontAssetChanged
@@ -440,6 +468,10 @@ PrefabInstance:
     - target: {fileID: 7607232819948457873, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155895321253157436, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 190
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
