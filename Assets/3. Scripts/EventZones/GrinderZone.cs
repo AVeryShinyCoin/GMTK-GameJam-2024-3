@@ -7,11 +7,9 @@ public class GrinderZone : MonoBehaviour
 {
     [SerializeField] GameObject scoreTextPrefab;
 
-    public bool gameOver;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (gameOver) return;
+        if (PauseMenu.Instance.GameOver) return;
 
         if (collision.gameObject.TryGetComponent(out EnemyObject enemy))
         {

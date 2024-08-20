@@ -6,6 +6,7 @@ using UnityEngine;
 public class ShopMenu : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI descriptionText;
+    [SerializeField] TextMeshProUGUI headerText;
 
     public void ShowDiscription(string description)
     {
@@ -14,11 +15,21 @@ public class ShopMenu : MonoBehaviour
 
     public bool CanBuyAtCost(int cost)
     {
-        return PauseMenu.Instance.Score >= cost;
+        return UpgradePoints.Instance.PointsAvailable >= cost;
     }
 
     public void SpendMoney(int cost)
     {
-        PauseMenu.Instance.AddScore(-cost);
+        UpgradePoints.Instance.PointsAvailable -= cost;
+        OnEnable();
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).GetComponent<ShopButton>().UpdateButton();
+        }
+    }
+
+    private void OnEnable()
+    {
+        headerText.text = "Upgrades Available:" + UpgradePoints.Instance.PointsAvailable;
     }
 }

@@ -15,6 +15,8 @@ public class PlayerMain : MonoBehaviour
     public float RescaleBeamPower;
     public bool EnablePushwave;
     public bool EnableMissiles;
+    public bool EnableTractorBeam;
+    public bool EnableSizeChange;
 
     [Space(20)]
     [SerializeField] InputAction movementControlsKeyboard;
@@ -49,6 +51,7 @@ public class PlayerMain : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
 
         rb = GetComponent<Rigidbody2D>();
@@ -56,11 +59,6 @@ public class PlayerMain : MonoBehaviour
 
         laserBeam.SetParent(null);
         laserBeam.gameObject.SetActive(false);
-    }
-
-    private void Start()
-    {
-        SoundManager.Instance.PlayMusic("bgmMusic");
     }
 
     private void Update()
@@ -84,14 +82,15 @@ public class PlayerMain : MonoBehaviour
             return;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && EnableTractorBeam)
         {
             TractorBeam();
             laserBeamSr.sprite = tractorBeam;
+            UpdateBeamSound();
             if (!shootingLaser) StartLaserBeam();
         }
 
-        if (scaleChanger.ReadValue<float>() != 0)
+        if (scaleChanger.ReadValue<float>() != 0 && EnableSizeChange)
         {
             SizeChangeBeam(scaleChanger.ReadValue<float>());
             if (scaleChanger.ReadValue<float>() < 0)
@@ -102,6 +101,7 @@ public class PlayerMain : MonoBehaviour
             {
                 laserBeamSr.sprite = sizeIncreaseBeam;
             }
+            UpdateBeamSound();
             if (!shootingLaser) StartLaserBeam();
         }
     }
@@ -171,14 +171,62 @@ public class PlayerMain : MonoBehaviour
 
     void StartLaserBeam()
     {
-        shootingLaser = true;
-        DisplayLaserBeam();
+        if (!shootingLaser)
+        {
+            shootingLaser = true;
+            DisplayLaserBeam();
+        }
     }
 
     void StopLaserBeam()
     {
-        laserBeam.gameObject.SetActive(false);
-        shootingLaser = false;
+        if (shootingLaser)
+        {
+            laserBeam.gameObject.SetActive(false);
+            shootingLaser = false;
+        }
+        UpdateBeamSound();
+    }
+
+    void UpdateBeamSound()
+    {
+        if (!shootingLaser)
+        {
+            SoundManager.Instance.StopSound("ShrinkBeamLoop");
+            SoundManager.Instance.StopSound("EnlargeBeamLoop");
+            SoundManager.Instance.StopSound("TractorBeamLoop");
+        }
+        else
+        {
+            float scale = scaleChanger.ReadValue<float>();
+            if (scale != 0 && EnableSizeChange)
+            {
+                if (scale < 0)
+                {
+                    SoundManager.Instance.PlaySound("ShrinkBeamLoop");
+                    SoundManager.Instance.StopSound("EnlargeBeamLoop");
+                }
+                else
+                {
+                    SoundManager.Instance.PlaySound("EnlargeBeamLoop");
+                    SoundManager.Instance.StopSound("ShrinkBeamLoop");
+                }
+            }
+            else
+            {
+                SoundManager.Instance.StopSound("ShrinkBeamLoop");
+                SoundManager.Instance.StopSound("EnlargeBeamLoop");
+            }
+
+            if (Input.GetMouseButton(0))
+            {
+                SoundManager.Instance.PlaySound("TractorBeamLoop");
+            }
+            else
+            {
+                SoundManager.Instance.StopSound("TractorBeamLoop");
+            }
+        }
     }
 
     void DisplayLaserBeam()
@@ -263,6 +311,7 @@ public class PlayerMain : MonoBehaviour
     {
         if (!EnablePushwave) return;
 
+        SoundManager.Instance.PlaySound("PushBack");
         GameObject gob = Instantiate(pushWavePrefab);
         gob.transform.position = transform.position + transform.right * 0.5f;
         gob.transform.rotation = transform.rotation;
@@ -289,11 +338,14 @@ public class PlayerMain : MonoBehaviour
     }
     public void GameOver()
     {
+        SoundManager.Instance.StopSound("ShrinkBeamLoop");
+        SoundManager.Instance.StopSound("EnlargeBeamLoop");
+        SoundManager.Instance.StopSound("TractorBeamLoop");
         GameObject gob = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         SoundManager.Instance.PlaySound("Explosion");
         StopLaserBeam();
+        PauseMenu.Instance.InvokeGameOver();
         Destroy(gameObject);
-        FindAnyObjectByType<GrinderZone>().gameOver = true;
     }
 
     private void OnEnable()

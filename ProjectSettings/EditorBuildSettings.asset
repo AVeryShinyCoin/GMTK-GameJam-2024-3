@@ -5,10 +5,37 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/1. Scenes/SampleScene.unity
+  - enabled: 1
+    path: Assets/1. Scenes/00. Main Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/1. Scenes/1. Tutorial.unity
+    guid: 304ab238ba2da2c4b875e3f7d1cdab87
+  - enabled: 1
+    path: Assets/1. Scenes/2. First Mission.unity
+    guid: f2463fc879a92ca4b829dcafcfe0505c
+  - enabled: 1
+    path: Assets/1. Scenes/3. Diamonds in the Rough.unity
+    guid: cd2aaaf785f55c244b3f2c5b6d21c68e
+  - enabled: 1
+    path: Assets/1. Scenes/4. Sparse Field.unity
+    guid: ba0f1b2559ee2ab42974a25a6f09f2c3
+  - enabled: 1
+    path: Assets/1. Scenes/5. Rings of Saturn.unity
+    guid: 97b2f67c2536bc247b31f44d05f9ee2a
+  - enabled: 1
+    path: Assets/1. Scenes/6. Meet the MOLLEs.unity
+    guid: 6abcfa1bc18133744a21ff416c1a07e0
+  - enabled: 1
+    path: Assets/1. Scenes/7. Asteroid Field.unity
+    guid: feb588f9f5a683345bedb0201fa82ac6
+  - enabled: 1
+    path: Assets/1. Scenes/8. The Molevolent Beast.unity
+    guid: 1398006c10fea014d93e5ebb1b194f5d
+  - enabled: 1
+    path: Assets/1. Scenes/Infinite Arena.unity
+    guid: fd3c0d57878804a4d953ec39f520cb75
+  - enabled: 0
     path: Assets/1. Scenes/Space Arena.unity
     guid: 7657ab3c9b7167b4db40949978431bd3
   m_configObjects: {}

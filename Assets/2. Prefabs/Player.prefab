@@ -56,6 +56,8 @@ MonoBehaviour:
   RescaleBeamPower: 4
   EnablePushwave: 0
   EnableMissiles: 0
+  EnableTractorBeam: 1
+  EnableSizeChange: 1
   movementControlsKeyboard:
     m_Name: Movement Controls Keyboard
     m_Type: 0
@@ -80,9 +82,25 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Movement Controls Keyboard
       m_Flags: 8
+    - m_Name: up
+      m_Id: 39d7e5d1-3f9e-44bb-9f3c-768c168039ff
+      m_Path: <Keyboard>/p
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement Controls Keyboard
+      m_Flags: 8
     - m_Name: down
       m_Id: ec9b540f-60ed-4d97-aca6-78b306b7bc75
       m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement Controls Keyboard
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 4ff87bcb-85f8-4cfe-a5a0-05497a2f1664
+      m_Path: <Keyboard>/semicolon
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -96,9 +114,25 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Movement Controls Keyboard
       m_Flags: 8
+    - m_Name: left
+      m_Id: c6160f55-8eb8-4c58-8630-01cbadb64dbf
+      m_Path: <Keyboard>/l
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement Controls Keyboard
+      m_Flags: 8
     - m_Name: right
       m_Id: 5fed34f5-09ef-42fb-94d6-ef0da9cc2903
       m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement Controls Keyboard
+      m_Flags: 8
+    - m_Name: right
+      m_Id: f1f6ac19-f85d-4331-bc62-e0afbccb5753
+      m_Path: <Keyboard>/quote
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -147,8 +181,24 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 0091a357-fffa-42e5-ad7e-318ff4b07100
-      m_Path: <Mouse>/rightButton
+      m_Id: f188e08f-6062-425b-bb73-99138070fe5f
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Push Wave
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 8c4eaa7f-478f-4053-a731-58d725c90e2f
+      m_Path: <Keyboard>/alt
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Push Wave
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 9c6f7ffa-3b61-4866-81be-be8b76cac213
+      m_Path: <Keyboard>/o
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -164,8 +214,8 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 938de5b0-6eaf-4c36-a964-df40db2d8946
-      m_Path: <Keyboard>/q
+      m_Id: 6fd852bb-b096-4b44-9821-a0f7ae9d60ee
+      m_Path: <Mouse>/rightButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
