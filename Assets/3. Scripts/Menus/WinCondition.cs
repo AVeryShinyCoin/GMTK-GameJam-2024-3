@@ -6,22 +6,34 @@ using UnityEngine.UI;
 
 public class WinCondition : MonoBehaviour
 {
+
     [SerializeField] float missionTime;
     float timeRemaining;
-    public int targetScore;
+    public int TargetScore;
 
     [SerializeField] TextMeshProUGUI targetText;
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] Slider slider;
 
     bool timerEnabled;
-    public bool QoutaReached;
+    public bool QuotaReached;
+
+    [Space(10)]
+    public bool InfiniteMode;
+    [SerializeField] float multiplier;
+    [SerializeField] float currentMultiplier;
+    float originalTarget;
+    public int cyclesComplete;
+    public float TotalTime;
+    public float QuotaTime;
 
     private void Start()
     {
-        targetText.text = "QOUTA: $" + targetScore;
-        timerText.text = "TIME: $" + targetScore;
+        targetText.text = "QOUTA: $" + TargetScore;
+        timerText.text = "TIME: $" + TargetScore;
         timeRemaining = missionTime;
+        currentMultiplier = multiplier;
+        originalTarget = TargetScore;
     }
 
     // *** Timer Related stuff ***
@@ -41,6 +53,7 @@ public class WinCondition : MonoBehaviour
         if (!timerEnabled) return;
 
         timeRemaining -= Time.deltaTime;
+        TotalTime += Time.deltaTime;
 
         if (timeRemaining > 0)
         {
@@ -56,22 +69,50 @@ public class WinCondition : MonoBehaviour
         }
         else
         {
-            timerText.text = "TIME: 00:00";
-            PauseMenu.Instance.EndGame(targetScore);
+            if (!InfiniteMode)
+            {
+                timerText.text = "TIME: 00:00";
+                PauseMenu.Instance.EndGame(TargetScore);
+            }
+            else
+            {
+                InfiniteModeNextStage();
+            }
         }
     }
 
     public void UpdateSlider(int score)
     {
-        if (QoutaReached) return;
-        float value = (float)score / (float)targetScore;
+        if (QuotaReached) return;
+        float value = (float)score / (float)TargetScore;
         if (value >= 1)
         {
-            QoutaReached = true;
+            QuotaReached = true;
             value = 1;
             targetText.color = Color.green;
-        }
             
+            if (!InfiniteMode) SoundManager.Instance.PlaySound("Quota");
+        } 
         slider.value = value;
+    }
+
+    void InfiniteModeNextStage()
+    {
+        if (QuotaReached)
+        {
+            SoundManager.Instance.PlaySound("Quota");
+            timeRemaining = QuotaTime;
+            TargetScore += (int)(originalTarget * currentMultiplier);
+            currentMultiplier *= multiplier;
+            targetText.text = "QOUTA: $" + TargetScore;
+            targetText.color = Color.white;
+            cyclesComplete++;
+            QuotaReached = false;
+            UpdateSlider(PauseMenu.Instance.Score);
+        }
+        else
+        {
+            PauseMenu.Instance.EndGame(TargetScore);
+        }
     }
 }

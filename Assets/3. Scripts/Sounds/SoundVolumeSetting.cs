@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class SoundVolumeSetting : MonoBehaviour
 {
     [SerializeField] AudioMixer mixer;
-    [SerializeField] Slider musicSlider;
-    [SerializeField] Slider sfxSlider;
+    public Slider musicSlider;
+    public Slider sfxSlider;
     const string MIXER_MUSIC = "MusicVolume";
     const string MIXER_SFX = "SfxVolume";
     public void UpdateMusicMixer()

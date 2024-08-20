@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] bool TurnOffSpawner;
+    public bool TurnOffSpawner;
     [SerializeField] float asteroidSpawnInterval;
     [SerializeField] List<Enemy> EnemiesSpawned = new();
 
