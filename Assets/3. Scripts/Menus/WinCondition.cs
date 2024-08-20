@@ -29,7 +29,7 @@ public class WinCondition : MonoBehaviour
 
     private void Start()
     {
-        targetText.text = "QOUTA: $" + TargetScore;
+        targetText.text = "QUOTA: $" + TargetScore;
         timerText.text = "TIME: $" + TargetScore;
         TimeRemaining = missionTime;
         currentMultiplier = multiplier;

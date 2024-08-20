@@ -132,6 +132,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 16387253548195842, guid: ab999077314e8fa41be6e17a6e191730, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 16387253548195842, guid: ab999077314e8fa41be6e17a6e191730, type: 3}
       propertyPath: TurnOffSpawner
       value: 0
       objectReference: {fileID: 0}
@@ -813,9 +817,33 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1840229282143077387, guid: e544c4bc54bb1784bba88cede881b1ff, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840229282143077387, guid: e544c4bc54bb1784bba88cede881b1ff, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840229282143077387, guid: e544c4bc54bb1784bba88cede881b1ff, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 869290541
+      objectReference: {fileID: 0}
     - target: {fileID: 2436322402889494216, guid: e544c4bc54bb1784bba88cede881b1ff, type: 3}
       propertyPath: m_Name
       value: Player Gfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942033474375782108, guid: e544c4bc54bb1784bba88cede881b1ff, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942033474375782108, guid: e544c4bc54bb1784bba88cede881b1ff, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942033474375782108, guid: e544c4bc54bb1784bba88cede881b1ff, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 869290541
       objectReference: {fileID: 0}
     - target: {fileID: 3028570141312492927, guid: e544c4bc54bb1784bba88cede881b1ff, type: 3}
       propertyPath: m_Layer
@@ -912,6 +940,10 @@ PrefabInstance:
     - target: {fileID: 8031174464465168395, guid: e544c4bc54bb1784bba88cede881b1ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8999211612609461323, guid: e544c4bc54bb1784bba88cede881b1ff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

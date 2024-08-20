@@ -651,6 +651,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &73229656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7530160415624548698, guid: 21a9fab756492a146935719e94a6c08f, type: 3}
+  m_PrefabInstance: {fileID: 596463113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &84043260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,7 +1263,7 @@ PrefabInstance:
       propertyPath: m_text
       value: '6
 
-        Meet the M.o.l.l.es'
+        Meet the M.o.l.l-es'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1543,12 +1548,25 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9190713113454875911, guid: 21a9fab756492a146935719e94a6c08f, type: 3}
   m_PrefabInstance: {fileID: 596463113}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 73229656}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59e1fd663fddbf24b92c5eeefa59f8e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &404526708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73229656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb83960ecefd7542988517582ff8684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: bgmMenu
 --- !u!1 &448348528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,7 +1856,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7530160415624548698, guid: 21a9fab756492a146935719e94a6c08f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 404526708}
   m_SourcePrefab: {fileID: 100100000, guid: 21a9fab756492a146935719e94a6c08f, type: 3}
 --- !u!1001 &633536275
 PrefabInstance:
@@ -2908,8 +2929,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2500, y: 2500}
+  m_AnchoredPosition: {x: 443, y: 0}
+  m_SizeDelta: {x: 10000, y: 10000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1328594450
 Animator:
@@ -2953,7 +2974,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 4c46105bfd40248489e37a987fc9a1df, type: 3}
-  m_Type: 0
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3575,7 +3596,7 @@ PrefabInstance:
       propertyPath: m_text
       value: '7
 
-        Asteroid field'
+        Never tell me the odds'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -131,6 +131,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (2)
@@ -392,6 +400,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (1)
@@ -488,6 +504,14 @@ PrefabInstance:
     - target: {fileID: 4214477081315998948, guid: cdeb4bc7cbb272c4489d84a8fd77b5f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376034272175455599, guid: cdeb4bc7cbb272c4489d84a8fd77b5f3, type: 3}
+      propertyPath: initialMovement.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376034272175455599, guid: cdeb4bc7cbb272c4489d84a8fd77b5f3, type: 3}
+      propertyPath: initialMovement.y
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6316045265367413847, guid: cdeb4bc7cbb272c4489d84a8fd77b5f3, type: 3}
       propertyPath: m_Name
@@ -675,6 +699,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid
@@ -1151,6 +1183,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (3)
@@ -1428,6 +1468,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -31.26
       objectReference: {fileID: 0}
+    - target: {fileID: 5376034272175455599, guid: cdeb4bc7cbb272c4489d84a8fd77b5f3, type: 3}
+      propertyPath: initialMovement.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376034272175455599, guid: cdeb4bc7cbb272c4489d84a8fd77b5f3, type: 3}
+      propertyPath: initialMovement.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6316045265367413847, guid: cdeb4bc7cbb272c4489d84a8fd77b5f3, type: 3}
       propertyPath: m_Name
       value: Gold Asteroid
@@ -1476,6 +1524,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (4)
@@ -1829,6 +1885,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2952610358362144635, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: TargetScore
       value: 15000
@@ -1860,6 +1920,17 @@ PrefabInstance:
     - target: {fileID: 5110796613842269995, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049466592018712632, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
+      propertyPath: m_text
+      value: 'QUOTA REACHED!
+
+
+        Thank you for playing!
+
+
+        (See you
+        in the infinite mode!)'
       objectReference: {fileID: 0}
     - target: {fileID: 8671425084200168125, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_AnchoredPosition.y

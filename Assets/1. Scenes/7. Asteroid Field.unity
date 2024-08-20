@@ -348,14 +348,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 529611826747839502, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_text
-      value: 'Level 7: Asteroid field
+      value: 'Level 7: Never tell me the odds
 
 
 
 
-        We''re in the depths of the field
-        now. There''s lots of stuff for you to bring in but that means there''s a
-        lot for more for you to dodge out there.
+        Our warp drive took us
+        to the middle of an asteroid field. There''s lots of stuff for you to bring
+        in but that means there''s a lot more for you to dodge out there as well!
 
 
 

@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (7)
@@ -188,6 +192,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (4)
@@ -245,6 +253,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (5)
@@ -418,6 +430,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (1)
@@ -587,6 +603,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (2)
@@ -788,6 +808,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5376034272175455599, guid: cdeb4bc7cbb272c4489d84a8fd77b5f3, type: 3}
+      propertyPath: initialMovement.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 6316045265367413847, guid: cdeb4bc7cbb272c4489d84a8fd77b5f3, type: 3}
       propertyPath: m_Name
       value: Gold Asteroid
@@ -805,6 +829,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (8)
@@ -862,6 +890,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid
@@ -1127,6 +1159,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (6)
@@ -1295,6 +1331,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (3)
@@ -1364,6 +1404,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935419016322886119, guid: 288599facf2354144bb65408d78641ba, type: 3}
+      propertyPath: initialMovement.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1281236402272919775, guid: 288599facf2354144bb65408d78641ba, type: 3}
       propertyPath: m_Name
       value: Asteroid (9)

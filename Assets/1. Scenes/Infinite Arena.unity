@@ -684,6 +684,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2069994988427804907, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
+      propertyPath: musicTrack
+      value: bgmInfinite
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069994988427804907, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: togglePause.m_Name
       value: Toggle Pause
       objectReference: {fileID: 0}
@@ -1319,10 +1323,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6603731176691665584, guid: 168984d5324b5d84dbdac409c2bb071b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 563702674}
+      addedObject: {fileID: 563702673}
     - targetCorrespondingSourceObject: {fileID: 6603731176691665584, guid: 168984d5324b5d84dbdac409c2bb071b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 563702673}
+      addedObject: {fileID: 563702681}
     - targetCorrespondingSourceObject: {fileID: 7450237608261662907, guid: 168984d5324b5d84dbdac409c2bb071b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 563702672}
@@ -1400,7 +1404,7 @@ MonoBehaviour:
       m_Action: Toggle Pause
       m_Flags: 0
     m_Flags: 0
---- !u!114 &563702674
+--- !u!114 &563702681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1409,7 +1413,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 563702671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9eaf4f13d35e3d47813e4d72b531c52, type: 3}
+  m_Script: {fileID: 11500000, guid: bd25bd4a562d6e3499bec12fe2aac411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &659471291
@@ -2477,7 +2481,7 @@ PrefabInstance:
     - target: {fileID: 7600773558916869972, guid: 6b82547feadbff44db81adc138944423, type: 3}
       propertyPath: upgradeDescription
       value: Unlock the aster blaster which pushes asteroids away from you. Use [Alt],
-        [Q] or [O] to fire.
+        [E] or [O] to fire.
       objectReference: {fileID: 0}
     - target: {fileID: 7776018400775981310, guid: 6b82547feadbff44db81adc138944423, type: 3}
       propertyPath: m_Pivot.x

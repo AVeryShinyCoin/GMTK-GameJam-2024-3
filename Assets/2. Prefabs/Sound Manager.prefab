@@ -297,9 +297,9 @@ MonoBehaviour:
     volumeChangeNewTarget: 0
     volumeChangeOriginal: 0
   - name: bgmMenu
-    clip: {fileID: 8300000, guid: c0da3bc6ec436704c9932224f96c89bd, type: 3}
+    clip: {fileID: 8300000, guid: c437a76b825d4754abfd3db4744fb455, type: 3}
     volume: 0.8
-    pitch: 0.8
+    pitch: 1
     loop: 1
     source: {fileID: 0}
     volumeChangeTimeTarget: 0
@@ -378,6 +378,16 @@ MonoBehaviour:
     volumeChangeOriginal: 0
   - name: bgmLevel7
     clip: {fileID: 8300000, guid: 754fc70f30b7ced44a77f6164dff3633, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: bgmInfinite
+    clip: {fileID: 8300000, guid: db2bdf8587e4c0f489007e43a8bc5a67, type: 3}
     volume: 0.8
     pitch: 1
     loop: 1
