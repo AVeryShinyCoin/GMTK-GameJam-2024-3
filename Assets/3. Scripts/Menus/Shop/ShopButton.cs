@@ -49,6 +49,7 @@ public class ShopButton : MonoBehaviour
         button.interactable = false;
         upgradeDescription = "BOUGHT! <br>" + upgradeDescription;
         shopMenu.ShowDiscription(upgradeDescription);
+        SoundManager.Instance.PlaySound("Quota");
     }
     public void MouseEnter()
     {

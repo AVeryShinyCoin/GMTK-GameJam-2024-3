@@ -33,9 +33,9 @@ public class UpgradePoints : MonoBehaviour
     {
         CurrentTime += Time.deltaTime;
 
-        for (int i = 1; i < givenPoint.Length - 1; i++)
+        for (int i = 0; i < givenPoint.Length; i++)
         {
-            if (!givenPoint[i] && CurrentTime > (float)(pointIntervall * i))
+            if (!givenPoint[i] && CurrentTime > (float)(pointIntervall * (i + 1)))
             {
                 givenPoint[i] = true;
                 GivePoint();
