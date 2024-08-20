@@ -8,7 +8,7 @@ public class WinCondition : MonoBehaviour
 {
 
     [SerializeField] float missionTime;
-    float timeRemaining;
+    public float TimeRemaining;
     public int TargetScore;
 
     [SerializeField] TextMeshProUGUI targetText;
@@ -31,7 +31,7 @@ public class WinCondition : MonoBehaviour
     {
         targetText.text = "QOUTA: $" + TargetScore;
         timerText.text = "TIME: $" + TargetScore;
-        timeRemaining = missionTime;
+        TimeRemaining = missionTime;
         currentMultiplier = multiplier;
         originalTarget = TargetScore;
     }
@@ -52,13 +52,13 @@ public class WinCondition : MonoBehaviour
     {
         if (!timerEnabled) return;
 
-        timeRemaining -= Time.deltaTime;
+        TimeRemaining -= Time.deltaTime;
         TotalTime += Time.deltaTime;
 
-        if (timeRemaining > 0)
+        if (TimeRemaining > 0)
         {
-            int minutes = Mathf.FloorToInt(timeRemaining / 60);
-            int seconds = Mathf.FloorToInt(timeRemaining % 60);
+            int minutes = Mathf.FloorToInt(TimeRemaining / 60);
+            int seconds = Mathf.FloorToInt(TimeRemaining % 60);
 
             string minutesZero = "";
             if (minutes < 10) minutesZero = "0";
@@ -101,7 +101,7 @@ public class WinCondition : MonoBehaviour
         if (QuotaReached)
         {
             SoundManager.Instance.PlaySound("Quota");
-            timeRemaining = QuotaTime;
+            TimeRemaining = QuotaTime;
             TargetScore += (int)(originalTarget * currentMultiplier);
             currentMultiplier *= multiplier;
             targetText.text = "QOUTA: $" + TargetScore;

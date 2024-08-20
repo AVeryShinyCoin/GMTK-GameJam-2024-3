@@ -10,16 +10,19 @@ public class ShopButton : MonoBehaviour
     [SerializeField] int cost;
     [TextArea(15, 20)]
     [SerializeField] string upgradeDescription;
-    ShopMenu shopMenu;
+    [SerializeField] ShopMenu shopMenu;
     Button button;
     bool boughtUpgrade;
     public Action UpgradeAction;
 
     private void Awake()
     {
-        shopMenu = GetComponentInParent<ShopMenu>();
         button = GetComponent<Button>();
-        GetComponentInChildren<TextMeshProUGUI>().text = "$" + cost + "<br>" + GetComponentInChildren<TextMeshProUGUI>().text;
+    }
+
+    public void UpdateButton()
+    {
+        OnEnable();
     }
 
     private void OnEnable()
@@ -29,7 +32,7 @@ public class ShopButton : MonoBehaviour
             button.interactable = false;
             return;
         }
-        if (!shopMenu.CanBuyAtCost(cost))
+        if (UpgradePoints.Instance.PointsAvailable < 1)
         {
             button.interactable = false;
             return;
@@ -39,7 +42,7 @@ public class ShopButton : MonoBehaviour
 
     public void ButtonPress()
     {
-        if (!shopMenu.CanBuyAtCost(cost)) return;
+        if (UpgradePoints.Instance.PointsAvailable < 1) return;
         shopMenu.SpendMoney(cost);
         UpgradeAction();
         boughtUpgrade = true;
