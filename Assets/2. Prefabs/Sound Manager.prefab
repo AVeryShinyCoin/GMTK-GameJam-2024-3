@@ -296,6 +296,96 @@ MonoBehaviour:
     volumeChangeTimeRemaining: 0
     volumeChangeNewTarget: 0
     volumeChangeOriginal: 0
+  - name: bgmMenu
+    clip: {fileID: 8300000, guid: c0da3bc6ec436704c9932224f96c89bd, type: 3}
+    volume: 0.8
+    pitch: 0.8
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: bgmLevel0
+    clip: {fileID: 8300000, guid: c0da3bc6ec436704c9932224f96c89bd, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: bgmLevel1
+    clip: {fileID: 8300000, guid: 6bb91f892fd0a324ca447cd30506c380, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: bgmLevel2
+    clip: {fileID: 8300000, guid: 4ca3e3c6b50ec534189bcf9da6c63924, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: bgmLevel3
+    clip: {fileID: 8300000, guid: c0da3bc6ec436704c9932224f96c89bd, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: bgmLevel4
+    clip: {fileID: 8300000, guid: bd3852f3cd5ec3d46ae3f857479e661d, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: bgmLevel5
+    clip: {fileID: 8300000, guid: 1da060bdad1be4d45a888595b4f14230, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: bgmLevel6
+    clip: {fileID: 8300000, guid: d5f665abc3544744cbb4c563179555e3, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: bgmLevel7
+    clip: {fileID: 8300000, guid: 754fc70f30b7ced44a77f6164dff3633, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
   musicMixer: {fileID: -639861425119776324, guid: ebcb5106c9d6fc04eaca3258209b83e8, type: 2}
   sfxMixer: {fileID: -9187446381186558160, guid: ebcb5106c9d6fc04eaca3258209b83e8, type: 2}
   overrides: []
