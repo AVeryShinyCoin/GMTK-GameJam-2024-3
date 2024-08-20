@@ -2273,6 +2273,10 @@ PrefabInstance:
       propertyPath: testMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2069994988427804907, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
+      propertyPath: musicTrack
+      value: bgmLevel0
+      objectReference: {fileID: 0}
     - target: {fileID: 2775165622802768742, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_IsActive
       value: 0
