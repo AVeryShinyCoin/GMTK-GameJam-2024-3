@@ -2277,7 +2277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: TargetScore
-      value: 4000
+      value: 3500
       objectReference: {fileID: 0}
     - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: missionTime
@@ -2289,7 +2289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3330485246759178881, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3444589967161955060, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_Camera
@@ -2301,11 +2301,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3760319874544085908, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.582
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3760319874544085908, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5110796613842269995, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_IsActive

@@ -361,7 +361,7 @@ PrefabInstance:
         because now the real work begins.
 
 
-        reach our target qouta before
+        reach our target quota before
         time runs out. M.o.l.e. doesn''t like to go hungry!'
       objectReference: {fileID: 0}
     - target: {fileID: 1683012340482798777, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}

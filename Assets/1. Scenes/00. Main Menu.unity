@@ -2584,7 +2584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Asteroid Re-scaling Company
+  m_text: Asteroid Rescaling Company
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39028ed87cc5d5f4eb5d36e7cd68f4c4, type: 2}
   m_sharedMaterial: {fileID: 7927996590855130819, guid: 39028ed87cc5d5f4eb5d36e7cd68f4c4, type: 2}
