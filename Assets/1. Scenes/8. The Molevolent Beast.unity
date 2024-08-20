@@ -1827,7 +1827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: TargetScore
-      value: 10000
+      value: 15000
       objectReference: {fileID: 0}
     - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: missionTime
