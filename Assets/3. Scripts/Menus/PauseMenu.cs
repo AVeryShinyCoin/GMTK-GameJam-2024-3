@@ -113,6 +113,9 @@ public class PauseMenu : MonoBehaviour
         if (GamePaused)
         {
             Time.timeScale = 0;
+            SoundManager.Instance.StopSound("ShrinkBeamLoop");
+            SoundManager.Instance.StopSound("EnlargeBeamLoop");
+            SoundManager.Instance.StopSound("TractorBeamLoop");
         }
         else
         {
@@ -127,7 +130,7 @@ public class PauseMenu : MonoBehaviour
         if (winCondition != null)
         {
             winCondition.UpdateSlider(Score);
-            if (winCondition.QoutaReached)
+            if (winCondition.QuotaReached)
             {
                 scoreText.color = Color.green;
             }
@@ -148,7 +151,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         GameOver = true;
         GamePaused = true;
-        if (Score >= targetScore)
+        SoundManager.Instance.StopSound("ShrinkBeamLoop");
+        SoundManager.Instance.StopSound("EnlargeBeamLoop");
+        SoundManager.Instance.StopSound("TractorBeamLoop");
+        if (Score >= targetScore || winCondition.InfiniteMode)
         {
             gameOverScreen.DisplayVictory(Score, targetScore, 0);
         }

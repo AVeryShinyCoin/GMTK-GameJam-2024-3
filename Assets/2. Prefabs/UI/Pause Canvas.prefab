@@ -865,7 +865,7 @@ MonoBehaviour:
   m_text: Next Level
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbf5ce744b7418e4792d482dca81bff5, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 1563655286747004543, guid: bbf5ce744b7418e4792d482dca81bff5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1653,10 +1653,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DIDN'T REACH QOUTA
+  m_text: DIDN'T REACH QUOTA
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e4bad63f143327247aa9aea7894b1390, type: 2}
+  m_sharedMaterial: {fileID: 1776835951886333883, guid: e4bad63f143327247aa9aea7894b1390, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2075,7 +2075,7 @@ MonoBehaviour:
   targetText: {fileID: 7218912716661589232}
   timerText: {fileID: 2255836234253453784}
   slider: {fileID: 537417865405602731}
-  QoutaReached: 0
+  QuotaReached: 0
 --- !u!1 &3635019740891439533
 GameObject:
   m_ObjectHideFlags: 0
@@ -3190,7 +3190,7 @@ MonoBehaviour:
   m_text: Retry Level
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbf5ce744b7418e4792d482dca81bff5, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 1563655286747004543, guid: bbf5ce744b7418e4792d482dca81bff5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3569,7 +3569,7 @@ MonoBehaviour:
   m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbf5ce744b7418e4792d482dca81bff5, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 1563655286747004543, guid: bbf5ce744b7418e4792d482dca81bff5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4022,7 +4022,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: QOUTA REACHED!
+  m_text: QUOTA REACHED!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4bad63f143327247aa9aea7894b1390, type: 2}
   m_sharedMaterial: {fileID: 1776835951886333883, guid: e4bad63f143327247aa9aea7894b1390, type: 2}

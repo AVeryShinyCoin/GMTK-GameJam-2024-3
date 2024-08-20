@@ -76,6 +76,12 @@ public class SoundManager : MonoBehaviour
         {
             return;
         }
+
+        if (s.source.isPlaying && s.source.loop)
+        {
+            return;
+        }
+
         s.source.Stop();
         s.source.pitch = s.pitch;
         s.source.Play();

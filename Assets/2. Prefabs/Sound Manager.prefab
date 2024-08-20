@@ -136,16 +136,6 @@ MonoBehaviour:
     volumeChangeTimeRemaining: 0
     volumeChangeNewTarget: 0
     volumeChangeOriginal: 0
-  - name: BeamLoop
-    clip: {fileID: 8300000, guid: 78fcd56ea496a3e468ece066962a4395, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-    volumeChangeTimeTarget: 0
-    volumeChangeTimeRemaining: 0
-    volumeChangeNewTarget: 0
-    volumeChangeOriginal: 0
   - name: BeamEnd
     clip: {fileID: 8300000, guid: 78f9de9d969d5e14d90ea3b778004e49, type: 3}
     volume: 1
@@ -230,6 +220,76 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 0db54c05a30544a4fac7373fe38fc308, type: 3}
     volume: 1
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: PushBack
+    clip: {fileID: 8300000, guid: c1ac805c07fd5444db729cb74653ad0b, type: 3}
+    volume: 0.5
+    pitch: 1.1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: ShrinkBeamLoop
+    clip: {fileID: 8300000, guid: 8bd0490b7a9c54d4ba961215a716a4e3, type: 3}
+    volume: 0.35
+    pitch: 1.6
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: EnlargeBeamLoop
+    clip: {fileID: 8300000, guid: 8bd0490b7a9c54d4ba961215a716a4e3, type: 3}
+    volume: 0.35
+    pitch: 1.2
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: TractorBeamLoop
+    clip: {fileID: 8300000, guid: 78fcd56ea496a3e468ece066962a4395, type: 3}
+    volume: 0.6
+    pitch: 0.8
+    loop: 1
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: Gem
+    clip: {fileID: 8300000, guid: 8ac21df67db999e458e3324cb6273458, type: 3}
+    volume: 1.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: Quota
+    clip: {fileID: 8300000, guid: 0d0c7b4bfaf843b478bcdfef340f751c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    volumeChangeTimeTarget: 0
+    volumeChangeTimeRemaining: 0
+    volumeChangeNewTarget: 0
+    volumeChangeOriginal: 0
+  - name: AsteroidCollide
+    clip: {fileID: 8300000, guid: ee1f882e265f7a64c85fb7e0f671c498, type: 3}
+    volume: 0.8
+    pitch: 0.75
     loop: 0
     source: {fileID: 0}
     volumeChangeTimeTarget: 0

@@ -43,7 +43,15 @@ public class AsteroidBreak : MonoBehaviour
 
         if (impactForce > resistance)
         {
-            InitiateBreakPattern();
+            if (PlayerMain.Instance != null &&
+                Vector2.Distance(collision.contacts[0].point, PlayerMain.Instance.transform.position) < 60)
+            {
+                InitiateBreakPatternWithSound();
+            }
+            else
+            {
+                InitiateBreakPattern();
+            }
         }
     }
 
@@ -58,6 +66,17 @@ public class AsteroidBreak : MonoBehaviour
         {
             InitiateBreakPattern();
         }
+    }
+
+    void InitiateBreakPatternWithSound()
+    {
+        if (transform.localScale.x > scaleBoundires[0])
+        {
+            float scale = UnityEngine.Random.Range(0.8f, 1.2f);
+            SoundManager.Instance.PlaySoundRandomPitch("AsteroidCollide", scale, scale);
+            //SoundManager.Instance.PlaySoundRandomPitch("AsteroidBreak", scale, scale);
+        }
+        InitiateBreakPattern();
     }
 
     public void InitiateBreakPattern()

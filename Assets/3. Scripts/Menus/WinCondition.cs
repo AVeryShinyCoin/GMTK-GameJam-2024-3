@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class WinCondition : MonoBehaviour
 {
+
     [SerializeField] float missionTime;
     float timeRemaining;
     public int TargetScore;
@@ -15,13 +16,22 @@ public class WinCondition : MonoBehaviour
     [SerializeField] Slider slider;
 
     bool timerEnabled;
-    public bool QoutaReached;
+    public bool QuotaReached;
+
+    [Space(10)]
+    public bool InfiniteMode;
+    [SerializeField] float multiplier;
+    [SerializeField] float currentMultiplier;
+    float originalTarget;
+    public int cyclesComplete;
 
     private void Start()
     {
         targetText.text = "QOUTA: $" + TargetScore;
         timerText.text = "TIME: $" + TargetScore;
         timeRemaining = missionTime;
+        currentMultiplier = multiplier;
+        originalTarget = TargetScore;
     }
 
     // *** Timer Related stuff ***
@@ -56,22 +66,43 @@ public class WinCondition : MonoBehaviour
         }
         else
         {
-            timerText.text = "TIME: 00:00";
-            PauseMenu.Instance.EndGame(TargetScore);
+            if (!InfiniteMode)
+            {
+                timerText.text = "TIME: 00:00";
+                PauseMenu.Instance.EndGame(TargetScore);
+            }
+            else
+            {
+                InfiniteModeNextStage();
+            }
         }
     }
 
     public void UpdateSlider(int score)
     {
-        if (QoutaReached) return;
+        if (QuotaReached) return;
         float value = (float)score / (float)TargetScore;
         if (value >= 1)
         {
-            QoutaReached = true;
+            QuotaReached = true;
             value = 1;
             targetText.color = Color.green;
-        }
-            
+            SoundManager.Instance.PlaySound("Quota");
+        } 
         slider.value = value;
+    }
+
+    void InfiniteModeNextStage()
+    {
+        if (PauseMenu.Instance.Score >= TargetScore)
+        {
+            timeRemaining = 30;
+            TargetScore += (int)(originalTarget * currentMultiplier);
+            currentMultiplier *= multiplier;
+        }
+        else
+        {
+            PauseMenu.Instance.EndGame(TargetScore);
+        }
     }
 }

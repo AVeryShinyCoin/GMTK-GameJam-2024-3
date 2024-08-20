@@ -16,7 +16,7 @@ public class Diamond : MonoBehaviour
 
     public void Collect()
     {
-        //SoundManager.Instance.PlaySoundRandomPitch("AsteroidBreak", 0.9f, 1.1f);
+        SoundManager.Instance.PlaySoundRandomPitch("Gem", 0.95f, 1.05f);
 
         PauseMenu.Instance.AddScore(ScoreValue);
         GameObject gob = Instantiate(scoreTextPrefab);

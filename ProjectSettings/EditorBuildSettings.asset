@@ -33,6 +33,6 @@ EditorBuildSettings:
     path: Assets/1. Scenes/8. The Molevolent Beast.unity
     guid: 1398006c10fea014d93e5ebb1b194f5d
   - enabled: 0
-    path: Assets/1. Scenes/Infinite Arena.unity
+    path: Assets/1. Scenes/Space Arena.unity
     guid: 7657ab3c9b7167b4db40949978431bd3
   m_configObjects: {}

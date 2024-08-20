@@ -194,7 +194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 16387253548195842, guid: ab999077314e8fa41be6e17a6e191730, type: 3}
       propertyPath: EnemiesSpawned.Array.data[0].NumberOfCopiesInList
-      value: 18
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 16387253548195842, guid: ab999077314e8fa41be6e17a6e191730, type: 3}
       propertyPath: EnemiesSpawned.Array.data[1].NumberOfCopiesInList
@@ -202,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 16387253548195842, guid: ab999077314e8fa41be6e17a6e191730, type: 3}
       propertyPath: EnemiesSpawned.Array.data[2].NumberOfCopiesInList
-      value: 12
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 16387253548195842, guid: ab999077314e8fa41be6e17a6e191730, type: 3}
       propertyPath: EnemiesSpawned.Array.data[3].NumberOfCopiesInList
@@ -464,7 +464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2582973845835262746, guid: 24cc491164bbe06419d7da152a3bfb68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.006298
+      value: -11.27
       objectReference: {fileID: 0}
     - target: {fileID: 2582973845835262746, guid: 24cc491164bbe06419d7da152a3bfb68, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1117,7 +1117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6187993368824055736, guid: 168984d5324b5d84dbdac409c2bb071b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -27.2
+      value: -21.463703
       objectReference: {fileID: 0}
     - target: {fileID: 6187993368824055736, guid: 168984d5324b5d84dbdac409c2bb071b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1531,7 +1531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2775165622802768742, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3199989148316630203, guid: f8ce657963a2e9043872b836bbd35b43, type: 3}
       propertyPath: TargetScore
